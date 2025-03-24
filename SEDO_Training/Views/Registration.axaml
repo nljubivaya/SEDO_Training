@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:vm="using:SEDO_Training.ViewModels"
+			 x:DataType="vm:RegistrationVM"
+             x:Class="SEDO_Training.Registration">
+
+	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20">
+		<Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" VerticalAlignment="Center">
+			<TextBlock Text="Регистрация" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+
+			<TextBox Watermark="Логин" Grid.Row="1" Margin="10" Height="40" Padding="10" BorderThickness="1" BorderBrush="#007ACC" Width="300" HorizontalAlignment="Center"/>
+
+			<TextBox Watermark="Пароль" Grid.Row="2" Margin="10" Height="40" Padding="10" BorderThickness="1" BorderBrush="#007ACC" PasswordChar="*" Width="300" HorizontalAlignment="Center"/>
+
+			<StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+				<CheckBox Content="Зарегистрировать как администратора" Margin="5" VerticalAlignment="Center"/>
+			</StackPanel>
+
+			<StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+				<Button Command="{Binding}" Content="Зарегистрировать" Background="#007ACC" Foreground="White" FontWeight="Bold" Height="40" Width="200" Margin="5" HorizontalContentAlignment="Center"/>
+			</StackPanel>
+
+		</Grid>
+	</Border>
+
+
+
+</UserControl>
