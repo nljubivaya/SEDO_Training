@@ -21,7 +21,26 @@ namespace SEDO_Training.ViewModels
             _currentUser = user;
             Load();
         }
-
+        string _search;
+        public string Search
+        {
+            get => _search;
+            set
+            {
+                _search = value;
+                AllFilters();
+            }
+        }
+        void AllFilters()
+        {
+            CourseList = MainWindowViewModel.myConnection.Courses.ToList();
+            if (!string.IsNullOrWhiteSpace(_search))
+            {
+                CourseList = CourseList.Where(x =>
+                    x.Name.ToLower().Contains(_search.ToLower())
+                ).ToList();
+            }
+        }
         public void Load()
         {
             CourseList = MainWindowViewModel.myConnection.Courses.ToList();

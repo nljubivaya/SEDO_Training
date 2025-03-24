@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +16,25 @@ namespace SEDO_Training.ViewModels
 {
 	public class AuthorizationVM : ViewModelBase
     {
+        private bool _isPasswordVisible;
+        public bool IsPasswordVisible
+        {
+            get => _isPasswordVisible;
+            set
+            {
+                if (_isPasswordVisible != value)
+                {
+                    _isPasswordVisible = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         private string _login;
         private string _password;
 
@@ -71,6 +92,5 @@ namespace SEDO_Training.ViewModels
                 await MessageBoxManager.GetMessageBoxStandard("Окно", "Авторизация не успешна", ButtonEnum.Ok).ShowAsync();
             }
         }
-
     }
 }

@@ -173,3 +173,4 @@ C:\Users\Yevge\source\repos\SEDO_Training\SEDO_Training\obj\Debug\net8.0\SEDO_Tr
 C:\Users\Yevge\source\repos\SEDO_Training\SEDO_Training\obj\Debug\net8.0\ref\SEDO_Training.dll
 C:\Users\Yevge\source\repos\SEDO_Training\SEDO_Training\bin\Debug\net8.0\DialogHost.Avalonia.dll
 C:\Users\Yevge\source\repos\SEDO_Training\SEDO_Training\bin\Debug\net8.0\MsBox.Avalonia.dll
+C:\Users\Yevge\source\repos\SEDO_Training\SEDO_Training\obj\Debug\net8.0\SEDO_Training.sourcelink.json
