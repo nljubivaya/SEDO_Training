@@ -38,6 +38,27 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Authorization.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course1.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course1p1.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course2.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course3.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course4.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course5.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course6.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

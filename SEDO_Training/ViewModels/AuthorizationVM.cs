@@ -92,5 +92,10 @@ namespace SEDO_Training.ViewModels
                 await MessageBoxManager.GetMessageBoxStandard("Окно", "Авторизация не успешна", ButtonEnum.Ok).ShowAsync();
             }
         }
+        public void To1()
+        {
+            MainWindowViewModel.Instance.PageContent = new Course1p1();
+        }
+
     }
 }

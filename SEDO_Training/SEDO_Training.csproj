@@ -14,6 +14,48 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\DocElements\add1.jpg" />
+    <None Remove="Assets\DocElements\add2.jpg" />
+    <None Remove="Assets\DocElements\addCat.jpg" />
+    <None Remove="Assets\DocElements\addkor.jpg" />
+    <None Remove="Assets\DocElements\addkor2.jpg" />
+    <None Remove="Assets\DocElements\addkor3.jpg" />
+    <None Remove="Assets\DocElements\addreg.jpg" />
+    <None Remove="Assets\DocElements\again.jpg" />
+    <None Remove="Assets\DocElements\comment.jpg" />
+    <None Remove="Assets\DocElements\control.jpg" />
+    <None Remove="Assets\DocElements\data.jpg" />
+    <None Remove="Assets\DocElements\delo.jpg" />
+    <None Remove="Assets\DocElements\details.jpg" />
+    <None Remove="Assets\DocElements\dop1.jpg" />
+    <None Remove="Assets\DocElements\dop2.jpg" />
+    <None Remove="Assets\DocElements\dop3.jpg" />
+    <None Remove="Assets\DocElements\eCat.jpg" />
+    <None Remove="Assets\DocElements\edit.jpg" />
+    <None Remove="Assets\DocElements\editGrif.jpg" />
+    <None Remove="Assets\DocElements\editkor.jpg" />
+    <None Remove="Assets\DocElements\filling.jpg" />
+    <None Remove="Assets\DocElements\grif.jpg" />
+    <None Remove="Assets\DocElements\komy.jpg" />
+    <None Remove="Assets\DocElements\kor1.jpg" />
+    <None Remove="Assets\DocElements\kor2.jpg" />
+    <None Remove="Assets\DocElements\kor3.jpg" />
+    <None Remove="Assets\DocElements\korrespond.jpg" />
+    <None Remove="Assets\DocElements\num1.jpg" />
+    <None Remove="Assets\DocElements\num2.jpg" />
+    <None Remove="Assets\DocElements\num3.jpg" />
+    <None Remove="Assets\DocElements\numekz.jpg" />
+    <None Remove="Assets\DocElements\podpisant1.jpg" />
+    <None Remove="Assets\DocElements\podpisant2.jpg" />
+    <None Remove="Assets\DocElements\pol1.jpg" />
+    <None Remove="Assets\DocElements\pol2.jpg" />
+    <None Remove="Assets\DocElements\pol3.jpg" />
+    <None Remove="Assets\DocElements\pol4.jpg" />
+    <None Remove="Assets\DocElements\recvisit.jpg" />
+    <None Remove="Assets\DocElements\showCat.jpg" />
+    <None Remove="Assets\DocElements\soder.jpg" />
+    <None Remove="Assets\DocElements\sroch.jpg" />
+    <None Remove="Assets\DocElements\vid.jpg" />
     <None Remove="Assets\eye.png" />
     <None Remove="Assets\eye_off.png" />
     <None Remove="Assets\logo.png" />
@@ -34,5 +76,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Course1p1.axaml.cs">
+      <DependentUpon>Course1p1.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Course2.axaml.cs">
+      <DependentUpon>Course2.axaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

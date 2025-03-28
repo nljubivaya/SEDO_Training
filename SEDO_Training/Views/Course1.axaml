@@ -1,0 +1,318 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:SEDO_Training.ViewModels"
+			 x:DataType="vm:Course1VM"
+			 x:Class="SEDO_Training.Course1">
+	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20" Background="#F7F7F7">
+		<ScrollViewer>
+			<StackPanel>
+				<TextBlock Text="Поля документа" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+				
+				<TextBlock Text="Адресаты" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Адресаты исходящего документа" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Для заполнения поля Адресаты выполните следующие действия:" FontSize="16" Margin="0,10"/>
+				<TextBlock Text="Для заполнения адресата-юридического лица:" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Введите первые буквы названия организации контрагента для выбора из списка или добавления новой записи, с возможностью настройки автоподбора и сортировки администратором модуля." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<TextBlock Text="При добавлении корреспондента в поле автоматически открывается всплывающее окно с информацией о контрагенте-юрлице и дополнительными реквизитами, включая полное наименование, руководителя, регион, адрес, ИНН и ОГРН." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+						<TextBlock Text="Также отображаются дополнительные реквизиты, такие как номер экземпляра, вид доставки и электронная почта, которая обязательна для заполнения, если выбран соответствующий вид доставки." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/SelectRecipient.jpg" Width="340" Height="250" Stretch="Uniform"/>
+					</Border>
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5,0">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/filling.jpg" Width="340" Height="250" Stretch="Uniform"/>
+					</Border>
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5,0">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/details.jpg" Width="340" Height="250" Stretch="Uniform"/>
+					</Border>
+				</StackPanel>
+				<StackPanel Margin="10,0">
+					<TextBlock Text="Если запись не найдена, добавьте ее с помощью ссылки +Создать нового корреспондента" FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/SelectRecipient.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/add1.jpg" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5,0">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/add2.jpg" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+				</StackPanel>
+				<StackPanel Margin="10,0">
+					<TextBlock Text="Поле для ввода адреса электронной почты отображается в окне дополнительных атрибутов адресата исходящего документа при выборе определенных видов доставки, настроенных Администратором. В режиме редактирования адрес можно заполнить вручную, и если он не будет указан, появится предупреждение о необходимости указания адреса электронной почты для выбранного вида доставки. Администратор модуля может настроить альтернативный сценарий, при котором поле электронной почты станет обязательным для заполнения при смене состояния исходящего документа. Если адреса электронной почты не указаны, появится сообщение об ошибке, и операция не будет выполнена. В режиме чтения отображаются заполненные электронные адреса корреспондента. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				</StackPanel>
+				<TextBlock Text="Адресаты внутреннего документа" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Поле Адресаты внутреннего документа заполняется аналогично полю Адресаты исходящего документа. При выборе сотрудников из роли Справочника сотрудников, если администратор настроил возможность выбора из списка рассылки, появится окно для выбора сотрудников. Если выбор недоступен, будут добавлены все сотрудники выбранной роли. Если их количество превышает разрешенное, появится предупреждение с запросом на подтверждение добавления всех сотрудников, при этом добавляются только активные сотрудники. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/again.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/edit.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5,0">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/comment.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+				</StackPanel>
+				<TextBlock Text="Вид документа. Внешний контроль. Дата регистрации." FontSize="16" FontWeight="Bold" Margin="0,10"/>
+
+				<TextBlock Text="В поле Вид документа указывается тип карточки для сохранения данных о бумажном экземпляре. Значение выбирается из справочника Виды карточек для типа Регистрационная карточка. Список видов настраивается по требованиям Заказчика и может быть расширен." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/vid.jpg" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Вид документа" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/control.jpg" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Внешний контроль" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/data.jpg" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Дата регистрации" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Дело" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<StackPanel Orientation="Horizontal" Margin="20">
+					<TextBlock Text="Поле Дело в регистрационных карточках (входящий, исходящий, внутренний) указывает дело, к которому относится документ, и значение выбирается из справочника Номенклатура дел или Справочника номенклатуры дел модуля Управление архивом."
+							   FontSize="16" TextWrapping="Wrap" Width="400" Margin="0,0,20,0"/>
+					<StackPanel Orientation="Horizontal" Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="0,0,10,0">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/delo.jpg" Width="250" Height="150" Stretch="Uniform"/>
+						</Border>
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/recvisit.jpg" Width="250" Height="150" Stretch="Uniform"/>
+						</Border>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Гриф" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<StackPanel Orientation="Horizontal" Margin="20">
+					<TextBlock Text="В поле Гриф указывается степень секретности документа, доступная во всех видах заданий. Для изменения грифа нажмите на его название, чтобы открыть выпадающий список, и выберите новое значение"
+							   FontSize="16" TextWrapping="Wrap" Width="400" Margin="0,0,20,0"/>
+					<StackPanel Orientation="Horizontal" Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="0,0,10,0">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/grif.jpg" Width="250" Height="150" Stretch="Uniform"/>
+						</Border>
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/DocElements/editGrif.jpg" Width="250" Height="150" Stretch="Uniform"/>
+						</Border>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Исполнитель. Категория." FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Поле Исполнитель присутствует в исходящих и внутренних документах и указывает на сотрудника, подготавливающего документ. При создании нового документа автоматически подставляется ФИО текущего сотрудника, если включена соответствующая настройка. Чтобы назначить нового исполнителя, нажмите на его ФИО, а для добавления дополнительных исполнителей введите первые буквы фамилии и выберите из выпадающего списка. Для просмотра информации о сотруднике наведите курсор на его ФИО, а для удаления исполнителя нажмите на значок рядом с его именем. " FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="В поле Категория указывается категория документа, которая классифицируется по нормативному документу с единым перечнем категорий. Для добавления категории в режиме редактирования введите первые цифры кода, выберите из автоподбора, при этом администратор может настроить альтернативные сценарии поиска по введенному значению или ограничить категории в зависимости от вида документа. " FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Vertical" Margin="20">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/eCat.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Поле Категория в режиме редактирования" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/addCat.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Поле Категория в режиме добавления" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/showCat.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Поле Категория в режиме просмотра" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Кому. Корреспонденты." FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<StackPanel Orientation="Horizontal" Margin="0,10">
+					<TextBlock Text="Поле Кому предназначено для указания получателей из бумажного документа. Задания для них не формируются. Доступен быстрый поиск сотрудников и подразделений, всплывающая подсказка отключена. При создании документа поле заполняется корневой организацией текущего сотрудника. Администратор может настроить автоподбор значений."
+							   FontSize="16" Margin="0,10" TextWrapping="Wrap" Width="350" />
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="10,0,0,0">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/komy.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+					<TextBlock Text="В поле Корреспонденты указывается контрагент, от которого поступил входящий документ, и оно присутствует только в документах типа входящий. При редактировании данных выполняется проверка уникальности, а для заполнения контрагента-юридического лица необходимо ввести первые буквы названия и выбрать из выпадающего списка или добавить новую запись."
+							   FontSize="16" Margin="0,10" TextWrapping="Wrap" Width="350" />
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="10,0,0,0">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/korrespond.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/kor1.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/kor2.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5,0">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/kor3.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+				</StackPanel>
+				<TextBlock Text="Добавление нового лица" FontSize="16" Margin="0,10"/>
+				<TextBlock Text="При регистрации документа можно добавить новых корреспондентов (юридических и физических лиц), отсутствующих в справочнике, через поле Корреспонденты для входящих документов или Адресаты для исходящих, нажав кнопку +Создать нового корреспондента в конце списка найденных контрагентов. " FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/addkor.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/addkor2.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+					<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5" Margin="5,0">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/addkor3.jpg" Width="350" Height="150" Stretch="Uniform"/>
+					</Border>
+				</StackPanel>
+				<StackPanel Orientation="Vertical" Margin="20" HorizontalAlignment="Center">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+						<StackPanel Margin="5" HorizontalAlignment="Center">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/addreg.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Добавление «Региона» для нового корреспондента" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5" HorizontalAlignment="Center">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/editkor.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Редактирование корреспондента из документа" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Номер бланка. Номер документа" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Чтобы указать номер бланка строгой отчетности, заполните поле Адресаты или Корреспонденты, выберите объект и в открывшейся форме укажите номер бланка. " FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="Поле Номер документа отображает временный номер до регистрации, а после регистрации — постоянный номер, который можно вводить вручную, получать из справочника, изменять или освобождать." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Vertical" Margin="20">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/num1.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Ссылки для добавления и получения номера вручную" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/num2.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Изменение номера вручную" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/num3.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Освобождение номера документа" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+				<TextBlock Text="Номер экзампляра. Подписант." FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="В модальном окне при нажатии на «+исх» в поле «Корреспонденты» можно добавлять подписанта вручную или автоматически, при этом поле может быть обязательным для заполнения, если это настроено администратором. Для добавления подписанта вручную заполните поле «Корреспонденты», затем введите «Фамилия Имя Отчество» в поле «Подписант» и нажмите «Добавить»." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Vertical" Margin="20">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/numekz.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Номер экземпляра" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/podpisant1.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Добавление нового подписанта из поля Подписант" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/podpisant2.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Результат добавления нового подписанта из поля Подписант" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Подразделение регистратора" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Заполнение поля «Подразделение регистратора» может происходить вручную при создании документа или автоматически, если установлены соответствующие настройки. При редактировании подписантов поле может также обновляться автоматически в зависимости от первого подписанта или при запуске маршрута согласования. В случае изменения значения поля ведется журналирование, отображающее старое и новое значения, а также информацию о сотруднике, внесшем изменения." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="Получатели" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Во входящем документе с помощью разметки можно отображать поле «Получатели» для добавления фактических получателей, на которых будут созданы задания на рассмотрение, с возможностью выбора сотрудников из справочника или списка рассылки, если это настроено администратором." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="В поле «Получатель» указываются сотрудники-контрагенты выбранной организации-получателя, и при отсутствии сотрудника в списке отображается текст ничего не найдено с возможностью добавить нового подписанта вручную. Поле «Руководитель» используется для заполнения информации о руководителе организации и может быть скрыто администратором при необходимости." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+								
+				<TextBlock Text="Содержание" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<Grid Margin="5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="2*"/>
+						<ColumnDefinition Width="1*"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Поле «Содержание» хранит информацию о назначении регистрационной карточки и является обязательным для регистрации документа. Его можно заполнить, введя текст вручную или выбрав заранее подготовленный текстовый шаблон из списка."
+							   FontSize="16"
+							   TextWrapping="Wrap"
+							   Grid.Column="0"
+							   Margin="0,10"/>
+
+					<Border Grid.Column="1" BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/soder.jpg" Width="250" Height="150" Stretch="Uniform"/>
+					</Border>
+				</Grid>
+				<TextBlock Text="Срочность" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<Grid Margin="5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="2*"/>
+						<ColumnDefinition Width="1*"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Поле «Срочность» определяет категорию срочности документа и влияет на пересчет значения поля «Срок резолюции» для входящих и внутренних документов"
+							   FontSize="16"
+							   TextWrapping="Wrap"
+							   Grid.Column="0"
+							   Margin="0,10"/>
+
+					<Border Grid.Column="1" BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+						<Image Source="avares://SEDO_Training/Assets/DocElements/sroch.jpg" Width="250" Height="150" Stretch="Uniform"/>
+					</Border>
+				</Grid>
+				<TextBlock Text="Дополнительные поля" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="В блоке «Документ» могут отображаться дополнительные поля, настроенные с помощью Конструктора карточек, которые содержат значения из дополнительных свойств регистрационной карточки. Поле типа «Запись универсального справочника» позволяет добавлять, редактировать и искать записи в справочнике. Также доступны поля типа «Сотрудник» и «Подразделение», позволяющие выбирать соответствующие записи из справочников. Поля типа «Контрагент» и «Подразделение контрагента» позволяют добавлять новые записи в справочник с обязательными для заполнения полями, такими как ФИО и наименование. При добавлении записей проверяется корректность заполнения обязательных полей, и в случае ошибок выводится соответствующее сообщение." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Vertical" Margin="20">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/dop1.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Создание справочника" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/dop2.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Редактирование справочника" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/DocElements/dop3.jpg" Width="250" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Создание нового контрагента" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+
+			</StackPanel>
+		</ScrollViewer>
+	</Border>
+
+</UserControl>
