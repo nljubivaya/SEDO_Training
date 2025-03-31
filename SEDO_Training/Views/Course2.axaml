@@ -3,7 +3,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="SEDO_Training.Coutse2">
+               xmlns:vm="using:SEDO_Training.ViewModels"
+			 x:DataType="vm:Course1VM"
+			 x:Class="SEDO_Training.Course2">
+	
 	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20" Background="#F7F7F7">
 		<ScrollViewer>
 			<StackPanel>

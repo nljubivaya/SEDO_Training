@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Assets\DocOperations\" />
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
@@ -59,6 +60,9 @@
     <None Remove="Assets\eye.png" />
     <None Remove="Assets\eye_off.png" />
     <None Remove="Assets\logo.png" />
+    <None Remove="Assets\Resolution\res1.png" />
+    <None Remove="Assets\Resolution\res2.png" />
+    <None Remove="Assets\Resolution\res3.png" />
     <None Remove="Assets\tests.png" />
   </ItemGroup>
 

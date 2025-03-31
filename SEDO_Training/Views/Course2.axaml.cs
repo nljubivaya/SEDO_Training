@@ -1,13 +1,16 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using SEDO_Training.ViewModels;
 
 namespace SEDO_Training;
 
-public partial class Coutse2 : UserControl
+public partial class Course2 : UserControl
 {
-    public Coutse2()
+    public Course2()
     {
         InitializeComponent();
+
+        DataContext = new Course1VM();
     }
 }
