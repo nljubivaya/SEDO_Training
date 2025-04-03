@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SEDO_Training")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ed1983b6f371d8fe82717bf8abab534200a9565")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd5a123ef025b732a956080b640872bf8887d482")]
 [assembly: System.Reflection.AssemblyProductAttribute("SEDO_Training")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SEDO_Training")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

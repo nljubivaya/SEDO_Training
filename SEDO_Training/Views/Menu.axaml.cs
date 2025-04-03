@@ -1,6 +1,8 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using SEDO_Training.Models;
 using SEDO_Training.ViewModels;
 using System;
 
@@ -12,6 +14,16 @@ public partial class Menu : UserControl
     {
         InitializeComponent();
 
-        DataContext = new MenuVM();
+        this.DataContext = new MenuVM();
+
     }
+    private void OnCourseButtonClick(object sender, RoutedEventArgs e)
+    {
+        if (sender is Button button && button.DataContext is Course course)
+        {
+            var viewModel = (MenuVM)this.DataContext;
+            viewModel.NavigateToCourse(course.Id);
+        }
+    }
+
 }

@@ -46,7 +46,7 @@
 							<StackPanel>
 								<TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Margin="0,5" TextWrapping="Wrap" MaxWidth="280"/>
 								<Image Height="120" Width="120" Source="{Binding Photo, Converter={StaticResource ImageConverter}}" Margin="5" HorizontalAlignment="Center"/>
-								<Button Command="{Binding }" CommandParameter="{Binding Id}" Content="Просмотр курса" HorizontalAlignment="Center" Margin="5" FontSize="16"/>
+								<Button Content="Просмотр курса" HorizontalAlignment="Center" Margin="5" FontSize="16" Click="OnCourseButtonClick"/>
 							</StackPanel>
 						</Border>
 					</DataTemplate>
