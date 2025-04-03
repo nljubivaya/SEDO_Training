@@ -17,6 +17,8 @@ public partial class PodgotovkaContext : DbContext
 
     public virtual DbSet<Course> Courses { get; set; }
 
+    public virtual DbSet<Questions1> Questions1s { get; set; }
+
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<Test> Tests { get; set; }
@@ -52,6 +54,31 @@ public partial class PodgotovkaContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("photo");
             entity.Property(e => e.Uk).HasColumnName("uk");
+        });
+
+        modelBuilder.Entity<Questions1>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("questions1_pkey");
+
+            entity.ToTable("questions1");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.Answer1)
+                .HasMaxLength(500)
+                .HasColumnName("answer1");
+            entity.Property(e => e.Answer2)
+                .HasMaxLength(500)
+                .HasColumnName("answer2");
+            entity.Property(e => e.Answer3)
+                .HasMaxLength(500)
+                .HasColumnName("answer3");
+            entity.Property(e => e.Correctanswerindex).HasColumnName("correctanswerindex");
+            entity.Property(e => e.Questiontext)
+                .HasMaxLength(500)
+                .HasColumnName("questiontext");
+            entity.Property(e => e.Selectedanswerindex).HasColumnName("selectedanswerindex");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -99,7 +126,7 @@ public partial class PodgotovkaContext : DbContext
                 .ValueGeneratedNever()
                 .HasColumnName("id");
             entity.Property(e => e.Description)
-                .HasMaxLength(100)
+                .HasMaxLength(500)
                 .HasColumnName("description");
             entity.Property(e => e.Title)
                 .HasMaxLength(100)

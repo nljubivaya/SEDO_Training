@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using ReactiveUI;
 using SEDO_Training.Models;
 using System.Linq;
+using MsBox.Avalonia.Enums;
+using MsBox.Avalonia;
 
 
 namespace SEDO_Training.ViewModels
@@ -17,7 +19,6 @@ namespace SEDO_Training.ViewModels
             get => _courseList;
             set => this.RaiseAndSetIfChanged(ref _courseList, value);
         }
-
         public MenuVM(User? user = null)
         {
             _currentUser = user;
@@ -50,6 +51,10 @@ namespace SEDO_Training.ViewModels
         {
             CourseList = MainWindowViewModel.myConnection.Courses.ToList();
         }
+        private async void ShowCourseNotAvailableMessage()
+        {
+            await MessageBoxManager.GetMessageBoxStandard("Информация", "На данный момент курс отсутствует", ButtonEnum.Ok).ShowAsync();
+        }
 
         public void NavigateToCourse(int id)
         {
@@ -74,9 +79,9 @@ namespace SEDO_Training.ViewModels
                     MainWindowViewModel.Instance.PageContent = new Course6();
                     break;
                 default:
+                    ShowCourseNotAvailableMessage();
                     break;
             }
         }
-
     }
 }
