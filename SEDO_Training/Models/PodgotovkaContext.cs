@@ -21,6 +21,8 @@ public partial class PodgotovkaContext : DbContext
 
     public virtual DbSet<Test> Tests { get; set; }
 
+    public virtual DbSet<Test4> Test4s { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<UsersTest> UsersTests { get; set; }
@@ -44,11 +46,12 @@ public partial class PodgotovkaContext : DbContext
                 .HasMaxLength(100)
                 .HasColumnName("description");
             entity.Property(e => e.Name)
-                .HasMaxLength(50)
+                .HasMaxLength(100)
                 .HasColumnName("name");
             entity.Property(e => e.Photo)
                 .HasMaxLength(255)
                 .HasColumnName("photo");
+            entity.Property(e => e.Uk).HasColumnName("uk");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -78,12 +81,29 @@ public partial class PodgotovkaContext : DbContext
                 .HasMaxLength(100)
                 .HasColumnName("description");
             entity.Property(e => e.Name)
-                .HasMaxLength(50)
+                .HasMaxLength(100)
                 .HasColumnName("name");
             entity.Property(e => e.Photo)
                 .HasMaxLength(255)
                 .HasColumnName("photo");
             entity.Property(e => e.Points).HasColumnName("points");
+        });
+
+        modelBuilder.Entity<Test4>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("test4_pkey");
+
+            entity.ToTable("test4");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.Description)
+                .HasMaxLength(100)
+                .HasColumnName("description");
+            entity.Property(e => e.Title)
+                .HasMaxLength(100)
+                .HasColumnName("title");
         });
 
         modelBuilder.Entity<User>(entity =>

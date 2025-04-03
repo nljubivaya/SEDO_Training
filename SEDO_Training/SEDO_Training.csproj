@@ -63,6 +63,11 @@
     <None Remove="Assets\Resolution\res1.png" />
     <None Remove="Assets\Resolution\res2.png" />
     <None Remove="Assets\Resolution\res3.png" />
+    <None Remove="Assets\ScanSamples\Scan1.png" />
+    <None Remove="Assets\ScanSamples\Scan2.png" />
+    <None Remove="Assets\ScanSamples\Scan3.png" />
+    <None Remove="Assets\ScanSamples\Scan4.png" />
+    <None Remove="Assets\ScanSamples\Scan5.png" />
     <None Remove="Assets\Search\look1.png" />
     <None Remove="Assets\Search\look10.png" />
     <None Remove="Assets\Search\look11.png" />
@@ -113,6 +118,9 @@
     </Compile>
     <Compile Update="Views\Course2.axaml.cs">
       <DependentUpon>Course2.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Test_4.axaml.cs">
+      <DependentUpon>Test_4.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

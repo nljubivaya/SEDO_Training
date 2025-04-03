@@ -12,6 +12,13 @@ namespace SEDO_Training.ViewModels
         {
             MainWindowViewModel.Instance.PageContent = new Menu();
         }
-
+        public void ToTest1()
+        {
+            MainWindowViewModel.Instance.PageContent = new Test1();
+        }
+        public void ToTest2()
+        {
+            MainWindowViewModel.Instance.PageContent = new Test2();
+        }
     }
 }

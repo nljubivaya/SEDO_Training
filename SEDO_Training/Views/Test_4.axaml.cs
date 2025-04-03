@@ -5,11 +5,11 @@ using SEDO_Training.ViewModels;
 
 namespace SEDO_Training;
 
-public partial class Test2 : UserControl
+public partial class Test_4 : UserControl
 {
-    public Test2()
+    public Test_4()
     {
         InitializeComponent();
-        DataContext = new Test2VM();
+        DataContext = new Test4VM();
     }
 }

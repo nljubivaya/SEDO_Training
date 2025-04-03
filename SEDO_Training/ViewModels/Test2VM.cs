@@ -4,15 +4,15 @@ using ReactiveUI;
 
 namespace SEDO_Training.ViewModels
 {
-	public class Test1VM : ViewModelBase
+	public class Test2VM : ViewModelBase
     {
         public void ToMain()
         {
             MainWindowViewModel.Instance.PageContent = new Menu();
         }
-        public void ToCourse1()
+        public void ToCourse2()
         {
-            MainWindowViewModel.Instance.PageContent = new Course1();
+            MainWindowViewModel.Instance.PageContent = new Course6();
         }
     }
 }

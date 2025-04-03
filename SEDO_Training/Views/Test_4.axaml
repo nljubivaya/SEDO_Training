@@ -3,9 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             xmlns:vm="using:SEDO_Training.ViewModels"
-			 x:DataType="vm:Test2VM"
-			 x:Class="SEDO_Training.Test2">
+            xmlns:vm="using:SEDO_Training.ViewModels"
+			 x:DataType="vm:Test4VM"
+			 x:Class="SEDO_Training.Test_4">
 	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20" Background="#F7F7F7">
 		<Grid>
 			<Grid.RowDefinitions>
@@ -15,14 +15,25 @@
 			<StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Stretch">
 				<Button Command="{Binding ToMain}" Content="Назад" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
 						Foreground="White" FontWeight="Bold"/>
-				<Button  Command="{Binding ToCourse2}" Content="Вернуться к курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
+				<Button  Command="{Binding ToCourse4}" Content="Вернуться к курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
 						Foreground="White" FontWeight="Bold"/>
 			</StackPanel>
 
 			<ScrollViewer Grid.Row="1">
 				<StackPanel>
 					<TextBlock Text="Тест по теме «»" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
-
+					<StackPanel>
+						<ListBox ItemsSource="{Binding Test4List}">
+							<ListBox.ItemTemplate>
+								<DataTemplate>
+									<StackPanel>
+										<TextBlock Text="{Binding Description}" TextWrapping="Wrap" Margin="0,5,0,0"/>
+										<TextBox Watermark="Ответ" Text="{Binding }" Grid.Row="1" Margin="10" Height="40" Padding="10" BorderThickness="1" BorderBrush="#007ACC" />
+									</StackPanel>
+								</DataTemplate>
+							</ListBox.ItemTemplate>
+						</ListBox>
+					</StackPanel>
 				</StackPanel>
 			</ScrollViewer>
 		</Grid>
