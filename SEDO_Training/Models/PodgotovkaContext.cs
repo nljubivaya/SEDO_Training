@@ -141,9 +141,7 @@ public partial class PodgotovkaContext : DbContext
 
             entity.HasIndex(e => e.Login, "users_login_key").IsUnique();
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Login)
                 .HasMaxLength(50)
                 .HasColumnName("login");
@@ -181,6 +179,7 @@ public partial class PodgotovkaContext : DbContext
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("users_tests_users_fkey");
         });
+        modelBuilder.HasSequence("users_id_seq");
 
         OnModelCreatingPartial(modelBuilder);
     }

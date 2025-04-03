@@ -96,6 +96,9 @@ namespace SEDO_Training.ViewModels
         {
             MainWindowViewModel.Instance.PageContent = new Course6();
         }
-
+        public void ToRegistration()
+        {
+            MainWindowViewModel.Instance.PageContent = new Registration();
+        }
     }
 }

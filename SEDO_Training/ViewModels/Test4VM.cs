@@ -12,8 +12,7 @@ namespace SEDO_Training.ViewModels
         public List<Test4> Test4List { get => _test4List; set => this.RaiseAndSetIfChanged(ref _test4List, value); }
         public Test4VM()
         {
-            Test4List = MainWindowViewModel.myConnection.Test4s.
-                                                               ToList();
+            Test4List = MainWindowViewModel.myConnection.Test4s.ToList();
         }
         public void ToMain()
         {

@@ -11,6 +11,7 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test1VM : ViewModelBase
     {
+        //public string[] Answers => new[] { Answer1, Answer2, Answer3 };
         private List<Questions1> _questions1List;
         public List<Questions1> Questions1List
         {
@@ -38,9 +39,9 @@ namespace SEDO_Training.ViewModels
                     correctAnswersCount++; 
                 }
             }
-
-            MessageBoxManager.GetMessageBoxStandard($"Результат", $"{correctAnswersCount} балла", ButtonEnum.Ok).ShowAsync();
+            MessageBoxManager.GetMessageBoxStandard($"Результат", $"Итого: {correctAnswersCount} б", ButtonEnum.Ok).ShowAsync();
         }
+
         public void ToMain()
         {
             MainWindowViewModel.Instance.PageContent = new Menu();
