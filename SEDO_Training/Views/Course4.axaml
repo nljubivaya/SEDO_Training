@@ -3,13 +3,220 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			  xmlns:vm="using:SEDO_Training.ViewModels"
+			 x:DataType="vm:Course1VM"
              x:Class="SEDO_Training.Course4">
 	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20" Background="#F7F7F7">
-		<ScrollViewer>
-			<StackPanel>
-				<TextBlock Text="Поиск" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Stretch">
+				<Button Command="{Binding ToMain}" Content="Назад" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"/>
+				<Button  Command="{Binding }" Content="Тест по курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"/>
+				</StackPanel>
 
-			</StackPanel>
-		</ScrollViewer>
+			<ScrollViewer Grid.Row="1">
+				<StackPanel>
+
+					<TextBlock Text="Поиск" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10" Grid.Row="1" VerticalAlignment="Center"/>
+
+					<TextBlock Text="Поиск документов по штрихкоду" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="В системе можно искать карточки документов по штрих-коду с помощью ручного сканера: нажмите кнопку в шапке сайта, отсканируйте штрих-код, и найденная карточка откроется в новой вкладке. Также документы можно сохранить в папке «Сканирование штрихкодов», где доступны групповые операции, такие как удаление и экспорт в Excel. Настройка папки выполняется администратором модуля." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+
+				<TextBlock Text="Поиск документов по штрихкоду" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Быстрый поиск позволяет находить документы и задания по введенным словам в поисковой строке на любой странице модуля. Для выполнения поиска введите текст, нажмите Enter, и на экране появится список карточек, содержащих искомый текст. Если количество найденных карточек превышает установленный лимит, появится сообщение с предложением уточнить параметры поиска. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+
+				<TextBlock Text="Автоподбор в полях карточек" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Автоподбор значений доступен во всех полях карточек, где можно выбирать значения из справочников. Для его использования введите несколько символов искомого объекта в поле, после чего начнется поиск, количество символов для начала которого устанавливается администратором." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="Автоподбор в полях выбора сотрудников и контрагентов позволяет быстро находить записи по введенным символам, с учетом настроек администратора по количеству символов для начала поиска. Для выполнения поиска введите первые символы в соответствующее поле и выберите значение из выпадающего списка. Также доступен поиск среди ранее найденных записей, который отображает последние 10 записей при установке курсора в поле без ввода символов." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="В модуле предусмотрен поиск контрагентов по условию содержит в различных полях документов и расширенного поиска. Результаты сортируются по полному совпадению, значимости и алфавиту. Администратор может настроить выделение записей жирным цветом для удобства поиска." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Search/search1.png" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Ввод текста поискового запроса в строку поиска" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Search/search2.png" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Результаты быстрого поиска" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Search/search3.png" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Быстрый поиск среди ранее найденных значений" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Search/search4.png" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Пример автоподбора организации-контрагента по двум вхождениям" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Search/search5.png" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Пример автоподбора сотрудника-контрагента по части имени" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Search/search6.png" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Пример автоподбора категории по части названия" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Расширенный поиск" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="В приложении предусмотрены три варианта расширенного поиска: документов, заданий и реестров приема-передачи, с отображением параметров в виде строки. Если результаты поиска отсутствуют, пользователю будет предложено изменить параметры, а при превышении лимита карточек появится сообщение с просьбой уточнить запрос. Также возможно искать по недоступным для выбора значениям и учитывать переводы сотрудников между подразделениями." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look1.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Отображение параметров поискового запроса" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look2.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Выбор организаций для поиска" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look3.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Результаты поиска по родительской организации или подразделению" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+					
+					<TextBlock Text="Поиск со спецсимволом * позволяет заменять любое количество символов в строке, что упрощает нахождение карточек сотрудников по частичному совпадению фамилий. Расширенный поиск также позволяет находить сотрудников по родительской организации или подразделению, отображая результаты с полными названиями организаций и фамилиями руководителей. Пользователи могут сохранять свои поисковые запросы для дальнейшего использования, что делает процесс поиска более эффективным." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look5.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Кнопка Сохранить запрос в окне расширенного поиска" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look6.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Окно для ввода названия сохраняемого запроса" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look7.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Поле поиска. Кнопка для раскрытия списка сохраненных поисковых запросов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+					
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look8.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Расширенный поиск документов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look9.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Отображение результатов расширенного поиска документов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+					
+					<TextBlock Text="Для использования сохраненного поискового запроса, откройте главную страницу модуля и выберите нужный запрос из списка сохраненных, который сгруппирован по типам документов и заданий. При выборе запроса система выполнит поиск объектов аналогично расширенному поиску. Чтобы изменить название или удалить запрос, перейдите в Личный кабинет пользователя на вкладку Поисковые запросы. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="Расширенный поиск документов позволяет выбирать вид документа после определения его типа, при этом дополнительные свойства отображаются с помощью значка. Поиск по номеру может быть выполнен как по полному, так и по частичному совпадению, с возможностью использования спецсимвола *. Поля для поиска по краткому содержанию, комментариям и делам также включены, с обязательными условиями для заполнения, чтобы избежать предупреждений о незаполненных полях." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look16.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Выбор типа задания Поручение для активации поиска Без документа-основания" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look17.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Расширенный поиск реестров" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+				<TextBlock Text="Раздел «Входящие» предназначен для поиска входящих документов и включает поля для корреспондента, получателя, даты регистрации исходящего и подписанта. Поиск по корреспондентам позволяет находить как физических, так и юридических лиц с поддержкой автоподбора и спецсимвола «*». Поле «Номер исходящего» позволяет искать документы по условию «Содержит» или «Начинается с», в зависимости от настроек администратора." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="Раздел «Исходящие, внутренние» предназначен для поиска исходящих и внутренних документов и включает поля для подписавшего, исполнителей, получателя, визирующего лица и типа визирования. В каждом поле поддерживается автоподбор, возможность поиска по родительской организации и использование спецсимвола «*». Разделы «Метки», «История» и «Дополнительные параметры» позволяют выполнять тематическое тегирование, отслеживать операции с документами и использовать свойства различных типов для более точного поиска. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look12.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Расширенный поиск по документам. Раздел Входящие" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look13.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Расширенный поиск по документам. Раздел Исходящие, внутренние" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look14.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Расширенный поиск по документам. Раздел Метки" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look15.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Расширенный поиск по документам. Раздел История" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+					
+					<TextBlock Text="Поле Запись универсального справочника в расширенном поиске позволяет добавлять одно или несколько значений с использованием автоподбора или выпадающего списка. Поле Дата/время также доступно для фильтрации по времени в блоке дополнительных параметров. Для поиска заданий необходимо заполнить основные параметры, такие как тип задания, исполнители и срок исполнения, после чего можно запустить поиск и получить результаты в табличном или карточном представлении. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="Поле «Срок исполнения» используется для поиска по срокам выполнения заданий, а его название настраивается администратором. Поле «Фактический срок исполнения» позволяет находить задания по фактическому сроку их выполнения. Также доступен поиск по параметру «Важность», где записи, недоступные для выбора, помечены строкой «(недоступно)». " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look10.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Срок исполнения (документа)" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Search/look11.png" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Срок исполнения (документа) и признак На контроле" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+					
+				<TextBlock Text="Полнотекстовый поиск" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Полнотекстовый поиск позволяет находить документы и задания по введенным словам в базе данных. При включенном полнотекстовом поиске результаты отображаются в отдельном окне, где можно выбрать область поиска: по реквизитам документа или вложенным файлам. Пользователи могут фильтровать результаты по типу документа, дате регистрации и другим атрибутам, а также сортировать карточки по различным критериям. Для предварительного просмотра документов достаточно нажать на заголовок найденной карточки. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Search/poisk0.png" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Просмотр результатов полнотекстового поиска" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Search/poisk1.png" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Пример отображения страницы полнотекстового поиска для префикса pno" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+					</StackPanel>
+				</ScrollViewer>
+			</Grid>
 	</Border>
 </UserControl>

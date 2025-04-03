@@ -63,6 +63,31 @@
     <None Remove="Assets\Resolution\res1.png" />
     <None Remove="Assets\Resolution\res2.png" />
     <None Remove="Assets\Resolution\res3.png" />
+    <None Remove="Assets\Search\look1.png" />
+    <None Remove="Assets\Search\look10.png" />
+    <None Remove="Assets\Search\look11.png" />
+    <None Remove="Assets\Search\look12.png" />
+    <None Remove="Assets\Search\look13.png" />
+    <None Remove="Assets\Search\look14.png" />
+    <None Remove="Assets\Search\look15.png" />
+    <None Remove="Assets\Search\look16.png" />
+    <None Remove="Assets\Search\look17.png" />
+    <None Remove="Assets\Search\look2.png" />
+    <None Remove="Assets\Search\look3.png" />
+    <None Remove="Assets\Search\look5.png" />
+    <None Remove="Assets\Search\look6.png" />
+    <None Remove="Assets\Search\look7.png" />
+    <None Remove="Assets\Search\look8.png" />
+    <None Remove="Assets\Search\look9.png" />
+    <None Remove="Assets\Search\poisk0.png" />
+    <None Remove="Assets\Search\poisk1.png" />
+    <None Remove="Assets\Search\search1.png" />
+    <None Remove="Assets\Search\search2.png" />
+    <None Remove="Assets\Search\search3.png" />
+    <None Remove="Assets\Search\search4.png" />
+    <None Remove="Assets\Search\search5.png" />
+    <None Remove="Assets\Search\search6.png" />
+    <None Remove="Assets\Search\search7.png" />
     <None Remove="Assets\tests.png" />
   </ItemGroup>
 

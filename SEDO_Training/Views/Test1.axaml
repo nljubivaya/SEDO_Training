@@ -1,0 +1,79 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:SEDO_Training.ViewModels"
+			 x:DataType="vm:Test1VM"
+			 x:Class="SEDO_Training.Test1">
+	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20" Background="#F7F7F7">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Stretch">
+				<Button Command="{Binding ToMain}" Content="Назад" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"/>
+				<Button  Command="{Binding }" Content="Вернуться к курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"/>
+			</StackPanel>
+
+			<ScrollViewer Grid.Row="1">
+				<StackPanel>
+					<TextBlock Text="Тест по теме «Поля документа»" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+					<StackPanel Margin="20">
+						<TextBlock Text="Какую информацию можно получить при добавлении корреспондента-юридического лица в поле адресатов?" FontSize="20" Margin="0,10" TextWrapping="Wrap"/>
+						<ComboBox Width="400" Margin="0,10" SelectedIndex="0">
+							<!--2 правильный-->
+							<ComboBoxItem Content="Только полное наименование контрагента" />
+							<ComboBoxItem Content="Полное наименование, руководителя, регион, адрес, ИНН и ОГРН, а также дополнительные реквизиты, такие как номер экземпляра, вид доставки и электронная почта" />
+							<ComboBoxItem Content="Только номер экземпляра и вид доставки" />
+						</ComboBox>
+					</StackPanel>
+
+					<StackPanel Margin="20">
+						<TextBlock Text="Какое действие происходит при выборе сотрудников из роли Справочника сотрудников в поле Адресаты внутреннего документа, если администратор настроил возможность выбора из списка рассылки?" FontSize="20" Margin="0,10" TextWrapping="Wrap"/>
+						<ComboBox Width="400" Margin="0,10" SelectedIndex="0">
+							<!--1 правильный-->
+							<ComboBoxItem Content="Появляется окно для выбора сотрудников из списка рассылки" />
+							<ComboBoxItem Content="Все сотрудники выбранной роли добавляются автоматически без подтверждения" />
+							<ComboBoxItem Content="Появляется окно для выбора сотрудников, но добавляются только неактивные сотрудники" />
+						</ComboBox>
+					</StackPanel>
+
+					<StackPanel Margin="20">
+						<TextBlock Text="Как можно назначить нового исполнителя для документа в поле Исполнитель?" FontSize="20" Margin="0,10" TextWrapping="Wrap"/>
+						<ComboBox Width="400" Margin="0,10" SelectedIndex="0">
+							<!--1 правильный-->
+							<ComboBoxItem Content="Нажать на ФИО текущего исполнителя и выбрать нового из выпадающего списка" />
+							<ComboBoxItem Content="Ввести полное имя нового исполнителя вручную" />
+							<ComboBoxItem Content="Нажать на значок удаления рядом с текущим исполнителем" />
+						</ComboBox>
+					</StackPanel>
+
+					<StackPanel Margin="20">
+						<TextBlock Text="Как можно добавить новых корреспондентов при регистрации документа?" FontSize="20" Margin="0,10" TextWrapping="Wrap"/>
+						<ComboBox Width="400" Margin="0,10" SelectedIndex="0">
+							<!--3 правильный-->
+							<ComboBoxItem Content="Ввести данные нового корреспондента вручную в поле для комментариев" />
+							<ComboBoxItem Content="Выбрать корреспондента из справочника и нажать кнопку Добавить" />
+							<ComboBoxItem Content="Нажать на кнопку +Создать нового корреспондента в конце списка найденных контрагентов" />
+						</ComboBox>
+					</StackPanel>
+
+					<StackPanel Margin="20">
+						<TextBlock Text="Как указать номер бланка строгой отчетности при регистрации документа?" FontSize="20" Margin="0,10" TextWrapping="Wrap"/>
+						<ComboBox Width="400" Margin="0,10" SelectedIndex="0">
+							<!--1 правильный-->
+							<ComboBoxItem Content="Заполнить поле Адресаты или Корреспонденты, выбрать объект и указать номер бланка в открывшейся форме" />
+							<ComboBoxItem Content="Ввести номер бланка вручную в поле Номер документа" />
+							<ComboBoxItem Content="Нажать на кнопку Добавить рядом с полем Номер бланка" />
+						</ComboBox>
+					</StackPanel>
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+	</Border>
+</UserControl>
+

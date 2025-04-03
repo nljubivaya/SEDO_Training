@@ -94,7 +94,7 @@ namespace SEDO_Training.ViewModels
         }
         public void To1()
         {
-            MainWindowViewModel.Instance.PageContent = new Course3();
+            MainWindowViewModel.Instance.PageContent = new Test1();
         }
 
     }
