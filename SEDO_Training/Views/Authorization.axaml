@@ -27,10 +27,7 @@
 				<Button Command="{Binding ToRegistration}" Content="Регистрация" Background="#007ACC"
 							Foreground="White" FontWeight="Bold" Height="40" Width="140" Margin="5"
 							HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-				<Button Command="{Binding To1}" Content="1" Background="#007ACC"
-						Foreground="White" FontWeight="Bold" Height="40" Width="140" Margin="5"
-						HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-			</StackPanel>
+				</StackPanel>
 		</Grid>
 	</Border>
 

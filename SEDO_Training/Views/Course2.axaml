@@ -23,6 +23,333 @@
 			<ScrollViewer Grid.Row="1">
 			<StackPanel>
 				<TextBlock Text="Операции с заданием" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+				<TextBlock Text="Создание задания" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Задание может быть создано различными способами, включая создание системы в результате передачи документа на рассмотрение, инициативное поручение от пользователя или поручение, возникающее из расписания резолюции. Также задания могут формироваться при создании маршрута согласования по документу и его запуске. Каждый способ соответствует определенному виду задания и имеет свои уникальные процессы. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+
+				<TextBlock Text="Открытие задания" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Открытие задания в интерфейсе модуля возможно несколькими способами: по ссылке в адресной строке браузера, из представления папки или через ссылки в блоках интерфейса. Информация об открытии задания сохраняется в истории карточки с указанием даты и времени операции, сотрудника и сообщения о выполнении." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+
+				<TextBlock Text="Просмотр задания" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Просмотр информации задания доступен даже при блокировке карточки другим пользователем. Открытие в режиме чтения возможно также при наличии ошибок в полях карточки, в этом случае появится сообщение: «Часть данных не может быть получена. Документ доступен только для чтения. Обратитесь к Администратору системы.» " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+
+				<TextBlock Text="Редактирование задания" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="При наличии неутвержденной резолюции задание блокируется для других пользователей и становится доступным только в режиме чтения с сообщением: «Задание заблокировано пользователем».В режиме редактирования недоступны шапка задания и основные блоки (информация, резолюция, ход исполнения, согласование). Снятие блокировки происходит при выходе из режима редактирования. Если это невозможно, отображается сообщение: «Задание доступно только для чтения». Если задание не заблокировано, доступны поля для редактирования." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+
+				<TextBlock Text="Управление заданием. Смена состояния задания" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Задание в системе документооборота может находиться в различных состояниях, определяемых сценарием работы и видом задания, с соответствующими индикаторами. В работу можно взять как основное задание, так и дочерние подзадания, что зависит от доступности операций и состояния задания. Для взятия задания в работу необходимо открыть его и нажать кнопку В работу, после чего задание перейдет в состояние В работе. Групповая операция также доступна, позволяя взять несколько заданий, выбрав их в представлении и нажав кнопку Взять в работу." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/Owt1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Команда В работу для инициативного поручения" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/Owt2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Команда групповой операции задания Взять в работу" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/Owt3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Сообщение о результате выполнения групповой операции Взять в работу" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Операция исполнения задания доступна для всех типов заданий, кроме согласования, находящихся в состоянии В работе, и если по ролевой модели разрешена операция Исполнить. Чтобы исполнить задание, нужно открыть его и нажать кнопку Исполнить. Если задание имеет связанные документы с типом связи Во исполнение в статусах Подготавливается и Согласуется, исполнение будет недоступно. Групповая операция исполнения заданий также доступна, позволяя выбрать несколько заданий и выполнить их одновременно через меню Действия." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="Операция исполнения всех заданий по документу доступна для заданий на рассмотрение и поручений в состоянии В работе, если у пользователя есть другие неисполненные задания и разрешены соответствующие операции. Чтобы выполнить все задания, откройте задание, нажмите кнопку Исполнить, и в появившемся окне выберите задания для исполнения. После выполнения групповой операции на экране отобразится результат, включая список неисполненных заданий, если таковые имеются. При этом ссылки на файлы будут скопированы в другие задания, а результаты исполнения будут автоматически добавлены, если это возможно." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/ok1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Окно исполнения всех моих заданий" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/ok2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Результат выполнения групповой операции исполнения всех моих заданий" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/ok3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Команда Завершить исполнение в задании на рассмотрение" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				<TextBlock Text="Завершение исполнения делегированного задания возможно, если оно находится в состоянии В работе и разрешена операция Исполнить. Для этого откройте задание, нажмите кнопку Завершить исполнение, и задание перейдет в состояние Исполнено. Возврат задания на доработку доступен в состоянии На проверке или Исполнено; для этого откройте задание, нажмите кнопку На доработку, укажите причину и подтвердите действие. Если необходимо вернуть задание с дочерними, выполните те же шаги, выбрав опцию На доработку с дочерними. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="Завершение проверки доступно для заданий в состоянии На проверке, если пользователю разрешена операция Завершить проверку. Для этого откройте задание и нажмите кнопку Завершить проверку. После этого задание перейдет в состояние Исполнено. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="Отклонение задания на рассмотрение возможно, если в нем нет утвержденной резолюции; для этого нажмите кнопку Отклонить, введите причину и подтвердите действие. После отклонения задание перейдет в состояние Отклонено, и фамилии получателей, отклонивших задание, будут помечены красным." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/ot1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Кнопка операции Отклонить" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/ot2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Ввод причины отклонения задания" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/ot3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Отображение комментария об отклонении задания в блоке Резолюция" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				<TextBlock Text="Для создания инициативного поручения на главной странице нажмите кнопку Дать поручение и заполните форму создания проекта резолюции. После этого выполните необходимые операции, такие как отправка поручения на утверждение или передача другому исполнителю. Удаление поручения возможно, если его состояние не На проверке, Исполнено или Аннулировано, и если у вас есть соответствующие права. Для отклонения поручения необходимо ввести причину отклонения в открывшемся окне. Завершение согласования выполняется после принятия решения по всем приложенным файлам, и для этого нужно нажать соответствующую кнопку в заголовке задания. " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<TextBlock Text="При согласовании файлов в заданияиях, кроме утверждений, необходимо подписать файлы в открывшемся окне. Если задание на утверждение и администратором предусмотрена конвертация файлов в PDF, подписывается только один сконвертированный файл. При наличии комментариев в задании поле для комментариев будет отображаться, и оно обязательно для заполнения. Если все файлы согласованы без замечаний, задание перейдет в состояние Согласовано; если есть замечания, то в состояние Согласовано с замечаниями. В случае отрицательного решения по любому файлу, задание будет переведено в состояние Отклонено с указанием причины." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/r473.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Завершение согласования" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/r474.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Завершение согласования при отсутствии отклоненных файлов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/r477.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Сообщения о принятии решения по файлу в истории КЗ" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Визирование выполняется, если выбран соответствующий тип визирования согласующего. Для положительного решения без замечаний откройте задание, ознакомьтесь с документами и нажмите кнопку Завизировать. Если есть замечания или пользовательские версии, появится окно для выбора варианта визирования. При наличии комментариев или пользовательских версий, задание может перейти в состояние Завизирован с замечаниями или Завизирован. В случае отрицательного решения укажите причину отклонения и нажмите кнопку Отклонить." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/v484.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Визирование. Кнопка для принятия положительного решения" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/v486.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Результат успешного визирования" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/v488.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Альтернативный сценарий визирования файлов с замечаниями" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Утверждение выполняется, если выбран соответствующий тип визирования. При утверждении, в отличие от других сценариев, подписание происходит на последнем этапе, если настроена конвертация файлов в единый PDF. Для положительного решения без замечаний необходимо открыть задание, ознакомиться с документами и нажать кнопку Утвердить. Если есть замечания, можно создать персональные версии файлов и добавить комментарии, после чего также нажать Утвердить. В случае отрицательного решения нужно указать причину отклонения и нажать кнопку Не утверждать, при этом задание может перейти в состояние Отклонено или Не утверждено в зависимости от наличия персональных версий файлов" FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/p1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Подписание файлов при утверждении" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/p2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Утверждение задания на согласование" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/p3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Отклонение утверждения при наличии файлов без принятых решений" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				<TextBlock Text="Подписание документов в системе возможно при согласовании, визировании и утверждении. Это настраивается администратором. Подписание выполняется при наличии необходимых признаков и допустимых типов визирования." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Чтобы подписать документ:" FontSize="16" Margin="0,10" TextWrapping="Wrap" FontWeight="Bold"/>
+				<TextBlock Text="1. Нажмите кнопку для принятия решения (например, Утвердить)." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="2. Если подписание доступно, файлы будут подписаны; иначе задание исполнится без подписания." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="3. Если подписание не обязательно, задание также исполнится без него." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="При успешном подписании может появиться окно с информацией о подписанных файлах. Если предусмотрен выбор варианта подписания, появится окно с вопросом о способе подписания:" FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="- Подписать без ЭЦП: задание исполнится без дополнительных действий." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="- Подписать с ЭЦП: выполняется подписание с использованием сертификата." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="Также доступна возможность исполнения задания на согласование без решения для заданий в состоянии 'В работе'. Автор задания должен указать причину исполнения без решения." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Исполнение задания на согласование без решения
+Эта функция доступна при наличии дополнительного модуля 'Сервис периодических задач'. Автоматическое исполнение происходит для неисполненных заданий, срок исполнения которых истек, если исполнители не входят в определённые группы. Задания получают статус 'Автосогласовано', и в журнал записывается сообщение о согласовании без решения." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Делегирование задания на согласование
+Чтобы делегировать задание:
+1. В полученном задании перейдите в блок 'Резолюция' и выберите 'Делегирование'.
+2. Нажмите 'Создать резолюцию', заполните форму и утвердите резолюцию.
+В резолюции должен быть указан единственный исполнитель с типом 'Ответственный'. Если указано более одного, появится сообщение об ошибке. Администратор может настроить альтернативный сценарий с другими условиями для делегирования." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Исполнение задания на делегированное согласование
+Для исполнения задания:
+1. Откройте задание и ознакомьтесь с документами.
+2. Нажмите кнопку для принятия решения. Название кнопки зависит от типа визирования." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Управление файлами в заданиях на согласование. В заданиях доступны операции с файлами, такие как просмотр оригинальной и совместной версий, а также сравнение с предыдущей версией." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/s1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Пример отображения задания в статусе Автосогласовано" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/s2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Делегирование задания" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/s3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Утвержденная резолюция делегированного согласования" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				<TextBlock Text="Заверение задания на согласование
+Заверение — это альтернативный сценарий работы модуля, позволяющий доверенным лицам руководителя работать с заданиями на согласование. При принятии решения по согласованию, переход в состояние 'На заверение' выполняется, если сценарий настроен администратором." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Заверение с наложением ЭП
+Операция доступна в состоянии задания 'На заверении'. Для заверения файла электронной подписью должно выполняться одно из условий: общее решение по всем файлам 'Согласовано' или 'Согласовано с замечаниями', или была выполнена замена файла персональной версии." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Для заверения задания выполните следующие действия:
+1. Откройте задание на согласование.
+2. Нажмите кнопку 'Заверить'.
+3. В появившемся окне нажмите 'Подписать' и выберите сертификат подписи." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Запрет просмотра замечаний согласующих лиц
+Администратором может быть настроен сценарий, при котором пользователи не могут видеть мнения других согласующих. Ограничения применяются для определённых сотрудников и могут игнорироваться в некоторых случаях." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Если запрет на просмотр настроен, он учитывается при отображении решений по согласованию и делегированных заданиях. Иконки согласования будут отображаться серым цветом, а решения будут скрыты." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<TextBlock Text="Добавление комментария и ответных файлов из 'шапки' задания на согласование
+В задание на согласование можно добавить комментарий и ответные файлы. При базовой настройке это выполняется по кнопке 'Добавить замечания' из листа согласования. Администратор может настроить альтернативный сценарий, позволяющий добавлять замечания из 'шапки' задания при определённых условиях." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Для добавления замечаний выполните следующие действия:
+1. В 'шапке' задания нажмите на кнопку 'Добавить замечания'.
+2. В открывшемся окне добавьте текстовый комментарий и/или ответный файл." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Комментарий и ответный файл появятся в столбце 'Комментарий' листа согласования и в дереве согласования." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Контроль исполнения поручений
+Сценарии контроля становятся доступны после заполнения поля 'Проверяющий' в резолюции." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Принять (снять с контроля)
+Операция доступна для заданий в состоянии 'На снятии с контроля'. Для снятия задания с контроля выполните следующие действия:
+1. Откройте задание в состоянии 'На снятии с контроля'.
+2. Нажмите кнопку 'Принять'." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="После успешного снятия с контроля администратором может быть настроен автоматический возврат пользователя в папку, из которой была открыта карточка." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Изменение фактической даты исполнения
+Дата исполнения указывается в поручениях на контроле. Для изменения фактической даты исполнения выполните следующие действия:
+1. Откройте задание в состоянии 'Исполнено'.
+2. Нажмите кнопку и выберите операцию 'Изменить фактическую дату исполнения'." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Возврат на доработку
+Операция доступна, если задание в состоянии 'На снятии с контроля'. Для возврата задания на доработку выполните следующие действия:
+1. Откройте задание.
+2. Нажмите кнопку 'На доработку'.
+3. Укажите причину и нажмите 'Отправить'." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Возврат на доработку с дочерними (на снятии с контроля)
+Операция доступна, если:
+- Задание в состоянии 'На снятии с контроля'.
+- В задании есть утверждённая резолюция." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Для возврата задания на доработку с дочерними выполните следующие действия:
+1. Откройте задание.
+2. Нажмите стрелку справа от кнопки 'На доработку' и выберите опцию 'На доработку с дочерними'.
+3. В открывшемся окне укажите причину возврата и нажмите 'На доработку с дочерними'." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Задание перейдёт в состояние 'На доработке'. В блоке 'Поручение' будет отображаться текст: 'Задание возвращено на доработку' и причина возврата." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+
+				<TextBlock Text="Передать задание" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Кнопка для передачи задания доступна, если состояние не 'Исполнено', 'На проверке', 'На снятии с контроля' или 'Аннулировано'. Для передачи задания: 1. Нажмите 'Передать задание' в 'шапке' задания. 2. В окне 'Назначить исполнителя': - Выберите нового исполнителя. - Установите признак 'Срочно' при необходимости. - Добавьте комментарий, если нужно. Нажмите 'Отправить'. Исполнитель изменится, информация о передаче отобразится в блоках 'Поручение' и 'Ход исполнения задания'. Администратор может настроить автоматический возврат пользователя в исходную папку." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/r4.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Команда Передать задание" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/r5.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Окно операции Назначить исполнителя" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Просмотр истории задания" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Для просмотра истории операций с заданием выполните следующие действия: 1. Откройте задание. 2. В 'шапке' задания нажмите на соответствующую кнопку. На экране появится таблица с информацией о событиях карточки: Дата, Сотрудник, Операция, Сообщение. 3. Для отбора данных воспользуйтесь фильтрами, нажав кнопку справа от названия столбца. В окне 'Фильтровать по' доступны параметры фильтра и кнопки: Применить, Отмена, Сбросить все. Фильтр по столбцу 'Сотрудник' позволяет найти операции, выполненные указанными сотрудниками. Фильтр по столбцу 'Операция' включает названия операций, выполненных с карточкой (например, скачивание, печать, открытие на редактирование). Отображается, если в истории есть соответствующие операции." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/pr1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Команда для просмотра истории задания" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/pr2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Блок История задания" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Просмотр отчетов из задания" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Для просмотра отчетов из документа выполните следующие действия: 1. Откройте задание. 2. Нажмите кнопку 'Отчет'. 3. В выпадающем списке выберите нужный отчет. На экране появится сформированный отчет." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/o1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Кнопка Отчет для просмотра отчета из задания" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/o2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Кнопка Отчет. Просмотр списка доступных отчетов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/o2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Пример сформированного отчета для задания" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				<TextBlock Text="Печать задания" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Чтобы распечатать задание, выполните следующие действия: 1. В заголовке задания нажмите кнопку и выберите нужную печатную форму из выпадающего списка. 2. При нажатии на элемент откроется печатная форма в новой вкладке браузера (при разрешённых всплывающих окнах). Если в личном кабинете настроен принтер по умолчанию, данные будут отправлены на него без открытия формы выбора параметров печати." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/pch1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Выбор печатной формы для задания" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/OperationsWithTask/pch2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Форма просмотра печатной формы и выбора параметров печати" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="КЗ. Отправить по эл.почте" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Отправка документа по электронной почте: Откройте задание и выберите 'Еще' → 'Отправить по эл. почте'. При отсутствии прав появится сообщение об ошибке. Укажите адресатов в окне отправки. Нажмите 'Отправить'. Если всё верно, получите уведомление о том, что документ отправлен. Адрес отправителя настраивается администратором. Ошибки аналогичны отправке из документа."  FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+								
+				<TextBlock Text="Групповые операции с заданиями" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Видимость названия групповой операции в меню кнопки Действия настраивается администратором модуля " FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
 
 			</StackPanel>
 		</ScrollViewer>
