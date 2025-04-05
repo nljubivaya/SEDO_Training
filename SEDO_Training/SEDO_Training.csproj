@@ -90,6 +90,10 @@
     <None Remove="Assets\OperationsWithTask\v484.PNG" />
     <None Remove="Assets\OperationsWithTask\v486.PNG" />
     <None Remove="Assets\OperationsWithTask\v488.PNG" />
+    <None Remove="Assets\Otchet\knopka.PNG" />
+    <None Remove="Assets\Otchet\otchet1.PNG" />
+    <None Remove="Assets\Otchet\otchet2.PNG" />
+    <None Remove="Assets\Otchet\otchet3.PNG" />
     <None Remove="Assets\Resolution\res1.png" />
     <None Remove="Assets\Resolution\res2.png" />
     <None Remove="Assets\Resolution\res3.png" />

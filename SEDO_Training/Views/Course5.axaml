@@ -22,6 +22,69 @@
 			<ScrollViewer Grid.Row="1">
 			<StackPanel>
 				<TextBlock Text="Отчёты" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+				<TextBlock Text="Просмотр списка доступных отчетов" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Для просмотра доступных отчетов выполните следующие действия:
+На главной странице приложения в области папок нажмите на ссылку Отчеты. В области представления папки отобразится список карточек отчетов." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+
+				<TextBlock Text="Карточка расширенного отчета Web-клиент" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Формирование выбранного отчета
+1. Выберите отчет:
+   - Нажмите на карточку отчета в списке.
+   - Введите ссылку на карточку расширенного отчета в адресное поле браузера.
+
+   В зависимости от настроек модуля может отобразиться либо отчет, либо окно для ввода параметров.
+
+2. Если открылась карточка расширенного отчета, укажите параметры для отчета. Окно для ввода параметров может быть отключено администратором.
+
+3. Нажмите кнопку 'Показать отчет' для формирования отчета. Отчет появится в виде таблицы. Если возникла ошибка, на странице отобразится сообщение об ошибке." FontSize="16" Margin="0,10" TextWrapping="Wrap"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Otchet/otchet1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Просмотр списка доступных отчетов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Otchet/otchet2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Карточка расширенного отчета" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Otchet/otchet3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Пример сформированного отчета" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+				</StackPanel>
+				
+				<TextBlock Text="Выгрузка отчета в Excel и Word" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="2*"/>
+						<ColumnDefinition Width="1*"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Column="0"
+							   Text="1. В окне сформированного отчета нажмите кнопку для выгрузки в нужный формат.
+2. Файл будет загружен на компьютер с названием отчета.
+3. Если возникла ошибка, появится сообщение: 'Ошибка при выгрузке отчета в Word/Excel: текст ошибки.'"
+							   FontSize="16"
+							   Margin="0,10"
+							   TextWrapping="Wrap"/>
+					<Image Grid.Column="1"
+						   Source="avares://SEDO_Training/Assets/Otchet/knopka.PNG"
+						   Width="350"
+						   Height="150"
+						   Stretch="Uniform"/>
+				</Grid>
+				<TextBlock Text="Открытие карточки расширенного отчета из браузера по ссылке" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+				<TextBlock Text="Формирование отчета
+Сформировать отчет можно, введя в адресное поле браузера ссылку:
+http://имя сервера:порт/cardExtReport/{id}
+где id — идентификатор карточки расширенного отчета. Откроется интерфейс модуля 'Административное делопроизводство. Web-клиент'.
+После этого:
+- Если параметр 'Запускать генерацию отчета при открытии карточки' выключен, появится окно для ввода параметров.
+- Если параметр включен, сразу отобразится сформированный отчет." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
 
 			</StackPanel>
 		</ScrollViewer>

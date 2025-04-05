@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\views\\course2.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\views\\course2.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\views\\course4.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\views\\course4.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     }
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +30,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Course4.axaml",
               "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Course4.axaml",
               "RelativeDocumentMoniker": "SEDO_Training\\Views\\Course4.axaml",
@@ -42,18 +38,6 @@
               "RelativeToolTip": "SEDO_Training\\Views\\Course4.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-04T21:04:42.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Course2.axaml",
-              "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Course2.axaml",
-              "RelativeDocumentMoniker": "SEDO_Training\\Views\\Course2.axaml",
-              "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Course2.axaml",
-              "RelativeToolTip": "SEDO_Training\\Views\\Course2.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-04T18:18:47.737Z",
               "EditorCaption": ""
             }
           ]
