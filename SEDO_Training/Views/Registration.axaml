@@ -15,9 +15,9 @@
 
 			<TextBox Watermark="Пароль" Grid.Row="2" Margin="10" Height="40" Padding="10" BorderThickness="1" BorderBrush="#007ACC" PasswordChar="*" Width="300" HorizontalAlignment="Center" Text="{Binding Password, Mode=TwoWay}"/>
 
-			<StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+			<!--<StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
 				<CheckBox Content="Зарегистрировать как администратора" Margin="5" VerticalAlignment="Center" IsChecked="{Binding IsAdmin, Mode=TwoWay}"/>
-			</StackPanel>
+			</StackPanel>-->
 
 			<StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
 				<Button Command="{Binding RegisterCommand}" Content="Зарегистрировать" Background="#007ACC" Foreground="White" FontWeight="Bold" Height="40" Width="200" Margin="5" HorizontalContentAlignment="Center"/>

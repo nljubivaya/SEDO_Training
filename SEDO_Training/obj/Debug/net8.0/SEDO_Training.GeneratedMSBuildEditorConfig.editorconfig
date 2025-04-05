@@ -35,6 +35,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Styles1.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/AddQ1.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Authorization.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

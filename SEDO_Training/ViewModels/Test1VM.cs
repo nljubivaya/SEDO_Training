@@ -11,6 +11,14 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test1VM : ViewModelBase
     {
+        public void Update(int id)
+        {
+            MainWindowViewModel.Instance.PageContent = new AddQ1(id);
+        }
+        public void ToPageAddQ1()
+        {
+            MainWindowViewModel.Instance.PageContent = new AddQ1();
+        }
         //public string[] Answers => new[] { Answer1, Answer2, Answer3 };
         private List<Questions1> _questions1List;
         public List<Questions1> Questions1List
@@ -24,7 +32,6 @@ namespace SEDO_Training.ViewModels
             Questions1List = MainWindowViewModel.myConnection.Questions1s.
                                                                ToList();
             CheckAnswersCommand = new RelayCommand(_ => CheckAnswers());
-
         }
         private void CheckAnswers()
         {
