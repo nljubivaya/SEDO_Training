@@ -59,6 +59,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course6.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Course7.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -77,5 +80,14 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Test6.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Test_3.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Test_4.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Test_5.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Test_7.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

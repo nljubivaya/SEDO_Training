@@ -1,0 +1,144 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:SEDO_Training.ViewModels"
+			 x:DataType="vm:Course1VM"
+			 x:Class="SEDO_Training.Course7">
+	
+	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20" Background="#F7F7F7">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Stretch">
+				<Button Command="{Binding ToMain}" Content="На главную" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"/>
+				<Button  Command="{Binding ToTest7}" Content="Тест по курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"/>
+			</StackPanel>
+
+			<ScrollViewer Grid.Row="1">
+				<StackPanel>
+					<TextBlock Text="Мастер наложения штампов" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+					<TextBlock Text="Предварительный просмотр штампа" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+					<TextBlock Text="В области штампов выберите миниатюру нужного штампа. Откроется окно предварительного просмотра.
+Нажмите кнопку в нижнем правом углу миниатюры. В открывшемся окне будет показано увеличенное изображение штампа. Для закрытия окна нажмите в правом верхнем углу" FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Otchet/st1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Кнопка предварительного просмотра штампа" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+					</StackPanel>
+					<StackPanel Margin="5">
+						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+							<Image Source="avares://SEDO_Training/Assets/Otchet/st2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+						</Border>
+						<TextBlock Text="Пример предварительного просмотра штампа" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+					
+					<TextBlock Text="Добавление штампа в окне «Мастера наложения штампов»" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+					<TextBlock Text="Для наложения штампа с помощью Мастера наложения штампов выполните следующие действия:
+
+1. В области Файлы блока Документ нажмите кнопку и выберите пункт Мастер наложения штампов.
+   Web-клиент 887
+   Модуль «Мастер наложения штампов»
+   Во время открытия окна мастера на экране отображается индикатор загрузки.
+   В открывшемся окне мастера отображается страница выбранного файла документа в режиме просмотра. 
+   Для перехода к другим страницам документа в нижней части окна расположен переключатель, 
+   включающий поле для ввода номера страницы и кнопки для перехода к следующей/предыдущей и первой/последней страницам документа.
+   После наложения штампов на этой странице будут также отображаться наложенные штампы.
+   Доступные штампы отображаются в левой части окна. Если штампов более 6, отображается вертикальная полоса прокрутки. 
+   При большом количестве штампов можно использовать фильтры. Фильтр Все предназначен для отображения всех доступных штампов.
+
+2. Выполните предварительный просмотр штампа (см. Предварительный просмотр штампа).
+
+3. Наложить штамп можно несколькими способами:
+   — при двойном щелчке левой клавиши мыши по штампу он будет наложен в документ на страницу в соответствии с параметрами, заданными по умолчанию в XSLT в параметре DefaultPages; таким образом штамп может быть добавлен:
+     • на первую страницу;
+     • на последнюю страницу;
+     • на все страницы.
+   — при нажатии на штамп он добавляется в документ на открытую на экране страницу. 
+     Если координаты не заданы, штамп добавляется в левый верхний угол, если указаны - в соответствии с заданными координатами.
+   — при перетягивании штампа он добавляется в документ аналогично п.1.
+   — при запуске открытого документа в документ автоматически добавляются ранее добавленные штампы.
+
+   В области документа можно перемещать активный штамп, перетаскивая его по экрану с помощью мыши или изменяя координаты в всплывающем окне или списке штампов.
+   Администратор модуля может настроить альтернативный сценарий работы модуля, допускающий наложение нескольких штампов регистрационных данных. См. разд. Наложение нескольких штампов регистрационных данных.
+
+4. Для сохранения наложенного штампа в документе нажмите Наложить.
+   Штамп появится в области Наложенные штампы. В ячейке штампа в поле Страница будет отображаться номер страницы, на которую нанесен штамп. 
+   Если штамп одного вида нанесен на несколько страниц, будет отображено несколько полей Страница. 
+   При необходимости, штамп можно удалить (см. разд. Удаление наложенных штампов).
+   В области Файлы блока Документ будет автоматически создан новый файл имя_файла_(файл отображения).pdf, в котором будет добавлено изображение наложенного штампа. 
+   Данный файл будет отображаться первым в списке файлов. 
+   Если название файла слишком длинное, на экране появится сообщение об ошибке: 
+   Наименование файла название (файл отображения).pdf превышает допустимую длину. Файл отображения не создан. 
+   или Наименование файла название суффикс.pdf превышает допустимую длину. Файл отображения не создан. 
+   В этом случае измените название файла и повторите операцию.
+" FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Otchet/d1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Окно мастера наложения штампов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Otchet/d2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Наложение штампа на документ" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+						<StackPanel Margin="5">
+							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+								<Image Source="avares://SEDO_Training/Assets/Otchet/d3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+							</Border>
+							<TextBlock Text="Файл отображения с наложенным штампом" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+						</StackPanel>
+					</StackPanel>
+
+					<TextBlock Text="Наложение нескольких штампов регистрационных данных" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+					<TextBlock Text="Возможность наложения нескольких штампов регистрационных данных является альтернативным сценарием работы модуля и по умолчанию отключена. Для наложения нескольких штампов выполните следующие шаги:
+Откройте окно Мастера наложения штампов.
+Наложите несколько штампов на документ, при необходимости на разные страницы.
+Для сохранения изменений нажмите кнопку Наложить.
+" FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<TextBlock Text="Нанесение штампа на последней странице между должностью и ФИО" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+					<TextBlock Text="В модуле поддерживается автоматическое нанесение штампа сертификата электронной подписи на последнюю страницу документа, между должностью и фамилией подписывающего лица. Эта функция доступна при наличии дополнительного модуля СЭД Сервис периодических задач, в состав которого входит Плагин автоматического нанесения штампа. Подробности настройки можно найти в документе Модуль Административное делопроизводство. Web-клиент. Руководство администратора." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/>
+					<TextBlock Text="Удаление наложенных штампов" FontSize="16" FontWeight="Bold" Margin="0,10"/>
+					<TextBlock Text="Штампы, наложенные на документ, отображаются в области Наложенные штампы и сгруппированы по видам. Доступно удаление одного или всех штампов.
+Для удаления одного штампа:
+Нажмите кнопку справа от номера страницы, чтобы удалить штамп с этой страницы.
+Нажмите кнопку справа от названия вида штампа, чтобы удалить его со всех страниц.
+Для удаления всех штампов нажмите кнопку справа от названия области Наложенные штампы и выберите Удалить все. Все штампы будут удалены." FontSize="16" Margin="0,10"  TextWrapping="Wrap"/><StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+	<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+		<StackPanel Margin="5">
+			<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+				<Image Source="avares://SEDO_Training/Assets/Otchet/s3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+			</Border>
+			<TextBlock Text="Наложение нескольких штампов регистрационных данных на документ" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+		</StackPanel>
+		<StackPanel Margin="5">
+			<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+				<Image Source="avares://SEDO_Training/Assets/Otchet/s2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+			</Border>
+			<TextBlock Text="Нанесение штампа на последней странице между должностью и ФИО" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+		</StackPanel>
+		<StackPanel Margin="5">
+			<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
+				<Image Source="avares://SEDO_Training/Assets/Otchet/s1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+			</Border>
+			<TextBlock Text="Удаление всех наложенных штампов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
+		</StackPanel>
+	</StackPanel>
+					</StackPanel>
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+	</Border>
+</UserControl>

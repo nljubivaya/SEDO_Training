@@ -78,6 +78,9 @@ namespace SEDO_Training.ViewModels
                 case 6:
                     MainWindowViewModel.Instance.PageContent = new Course6();
                     break;
+                case 7:
+                    MainWindowViewModel.Instance.PageContent = new Course7();
+                    break;
                 default:
                     ShowCourseNotAvailableMessage();
                     break;

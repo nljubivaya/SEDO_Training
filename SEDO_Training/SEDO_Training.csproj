@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\courses\course8.png" />
     <None Remove="Assets\DocElements\add1.jpg" />
     <None Remove="Assets\DocElements\add2.jpg" />
     <None Remove="Assets\DocElements\addCat.jpg" />
@@ -127,6 +128,14 @@
     <None Remove="Assets\Search\search5.png" />
     <None Remove="Assets\Search\search6.png" />
     <None Remove="Assets\Search\search7.png" />
+    <None Remove="Assets\Stamp\d1.PNG" />
+    <None Remove="Assets\Stamp\d2.PNG" />
+    <None Remove="Assets\Stamp\d3.PNG" />
+    <None Remove="Assets\Stamp\s1.PNG" />
+    <None Remove="Assets\Stamp\s2.PNG" />
+    <None Remove="Assets\Stamp\s3.PNG" />
+    <None Remove="Assets\Stamp\st1.PNG" />
+    <None Remove="Assets\Stamp\st2.PNG" />
     <None Remove="Assets\tests.png" />
   </ItemGroup>
 

@@ -15,7 +15,7 @@
 			<StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Stretch">
 				<Button Command="{Binding ToMain}" Content="На главную" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
 						Foreground="White" FontWeight="Bold"/>
-				<Button  Command="{Binding }" Content="Тест по курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
+				<Button  Command="{Binding ToTest4}" Content="Тест по курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
 						Foreground="White" FontWeight="Bold"/>
 				</StackPanel>
 

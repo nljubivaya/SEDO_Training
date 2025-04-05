@@ -20,5 +20,25 @@ namespace SEDO_Training.ViewModels
         {
             MainWindowViewModel.Instance.PageContent = new Test2();
         }
+        public void ToTest3()
+        {
+            MainWindowViewModel.Instance.PageContent = new Test_3();
+        }
+        public void ToTest4()
+        {
+            MainWindowViewModel.Instance.PageContent = new Test_4();
+        }
+        public void ToTest5()
+        {
+            MainWindowViewModel.Instance.PageContent = new Test_5();
+        }
+        public void ToTest6()
+        {
+            MainWindowViewModel.Instance.PageContent = new Test6();
+        }
+        public void ToTest7()
+        {
+            MainWindowViewModel.Instance.PageContent = new Test_7();
+        }
     }
 }
