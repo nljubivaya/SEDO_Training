@@ -18,7 +18,7 @@
 				<Button  Command="{Binding ToCourse6}" Content="Вернуться к курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
 						Foreground="White" FontWeight="Bold"/>
 				<Button  Command="{Binding ToPageAddQ6}" Content="Добавить" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
-						Foreground="White" FontWeight="Bold"/>
+						Foreground="White" FontWeight="Bold" IsVisible="{Binding IsButtonVisible}"/>
 			</StackPanel>
 
 			<ScrollViewer Grid.Row="1">

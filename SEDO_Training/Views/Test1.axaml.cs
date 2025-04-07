@@ -12,4 +12,5 @@ public partial class Test1 : UserControl
         InitializeComponent();
         DataContext = viewModel;
     }
+
 }

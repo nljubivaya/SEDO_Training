@@ -212,9 +212,7 @@ public partial class PodgotovkaContext : DbContext
 
             entity.ToTable("users_tests");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Points).HasColumnName("points");
             entity.Property(e => e.Tests).HasColumnName("tests");
             entity.Property(e => e.Users).HasColumnName("users");

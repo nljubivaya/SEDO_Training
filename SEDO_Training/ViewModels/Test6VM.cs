@@ -11,8 +11,17 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test6VM : ViewModelBase
     {
-		 public string[][] Answers => Questions6List.Select(q => new[] { q.Answer1, q.Answer2, q.Answer3 }).ToArray();
-
+        public bool _isButtonVisible;
+        public bool IsButtonVisible
+        {
+            get => _isButtonVisible;
+            set => this.RaiseAndSetIfChanged(ref _isButtonVisible, value);
+        }
+        public void UpdateButtonVisibility()
+        {
+            IsButtonVisible = _currentUser?.Role == 2;
+        }
+        public string[][] Answers => Questions6List.Select(q => new[] { q.Answer1, q.Answer2, q.Answer3 }).ToArray();
         public async void Delete(int id)
         {
             var result = await MessageBoxManager.GetMessageBoxStandard("Подтвердить удаление?",
@@ -59,6 +68,7 @@ namespace SEDO_Training.ViewModels
                                                                ToList();
             CheckAnswersCommand = new RelayCommand(_ => CheckAnswers());
             _currentUser = user;
+            UpdateButtonVisibility();
         }
         private void CheckAnswers()
         {
@@ -66,9 +76,11 @@ namespace SEDO_Training.ViewModels
 
             foreach (var question in Questions6List)
             {
+                // Проверяем, выбран ли ответ
                 if (question.Selectedanswerindex.HasValue)
                 {
                     int selectedAnswerIndex = question.Selectedanswerindex.Value;
+
                     if (selectedAnswerIndex == question.Correctanswerindex)
                     {
                         correctAnswersCount++;
@@ -78,6 +90,31 @@ namespace SEDO_Training.ViewModels
             }
             MainWindowViewModel.myConnection.SaveChanges();
             MessageBoxManager.GetMessageBoxStandard($"Результат", $"Итого: {correctAnswersCount} ", ButtonEnum.Ok).ShowAsync();
+            AddPointsToUser(correctAnswersCount);
+        }
+
+        private void AddPointsToUser(int points)
+        {
+            if (_currentUser == null) return;
+
+            var userTestRecord = MainWindowViewModel.myConnection.UsersTests
+                .FirstOrDefault(ut => ut.Users == _currentUser.Id);
+
+            if (userTestRecord == null)
+            {
+                userTestRecord = new UsersTest
+                {
+                    Users = _currentUser.Id,
+                    Points = points,
+                    Tests = 6
+                };
+                MainWindowViewModel.myConnection.UsersTests.Add(userTestRecord);
+            }
+            else
+            {
+                userTestRecord.Points = points;
+            }
+            MainWindowViewModel.myConnection.SaveChanges();
         }
 
         public void ToMain()

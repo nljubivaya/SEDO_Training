@@ -10,6 +10,7 @@ namespace SEDO_Training.ViewModels
 {
     public class MenuVM : ViewModelBase
     {
+
         private User? _currentUser;
         public string CurrentUser => _currentUser?.Login;
         public bool ButtonEnabled => _currentUser?.Role == 2;
@@ -23,6 +24,7 @@ namespace SEDO_Training.ViewModels
         {
             _currentUser = user;
             Load();
+            UpdateButtonVisibility();
         }
 
         private string _search;
@@ -35,7 +37,18 @@ namespace SEDO_Training.ViewModels
                 AllFilters();
             }
         }
+        private bool _isButtonVisible;
 
+        public bool IsButtonVisible
+        {
+            get => _isButtonVisible;
+            set => this.RaiseAndSetIfChanged(ref _isButtonVisible, value);
+        }
+
+        private void UpdateButtonVisibility()
+        {
+            IsButtonVisible = _currentUser?.Role == 2; 
+        }
         void AllFilters()
         {
             CourseList = MainWindowViewModel.myConnection.Courses.ToList();
@@ -58,6 +71,10 @@ namespace SEDO_Training.ViewModels
         private async void ShowCourseNotAvailableMessage()
         {
             await MessageBoxManager.GetMessageBoxStandard("Информация", "На данный момент курс отсутствует", ButtonEnum.Ok).ShowAsync();
+        }
+        private async void ShowTestNotAvailableMessage()
+        {
+            await MessageBoxManager.GetMessageBoxStandard("Информация", "На данный момент тест отсутствует", ButtonEnum.Ok).ShowAsync();
         }
 
         public void NavigateToCourse(int id)
@@ -90,37 +107,5 @@ namespace SEDO_Training.ViewModels
                     break;
             }
         }
-
-        public void NavigateToTest(int id)
-        {
-            switch (id)
-            {
-                case 1:
-                    MainWindowViewModel.Instance.PageContent = new Test1(new Test1VM(_currentUser));
-                    break;
-                case 2:
-                    MainWindowViewModel.Instance.PageContent = new Test2(new Test2VM(_currentUser));
-                    break;
-                case 3:
-                    MainWindowViewModel.Instance.PageContent = new Test_3(new Test3VM(_currentUser));
-                    break;
-                case 4:
-                    MainWindowViewModel.Instance.PageContent = new Test_4(new Test4VM(_currentUser));
-                    break;
-                case 5:
-                    MainWindowViewModel.Instance.PageContent = new Test_5(new Test5VM(_currentUser));
-                    break;
-                case 6:
-                    MainWindowViewModel.Instance.PageContent = new Test6(new Test6VM(_currentUser));
-                    break;
-                case 7:
-                    MainWindowViewModel.Instance.PageContent = new Test_7(new Test7VM(_currentUser));
-                    break;
-                default:
-                    ShowCourseNotAvailableMessage();
-                    break;
-            }
-        }
-
     }
 }

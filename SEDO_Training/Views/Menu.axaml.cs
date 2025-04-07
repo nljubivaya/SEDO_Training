@@ -23,5 +23,4 @@ public partial class Menu : UserControl
             viewModel.NavigateToCourse(course.Id);
         }
     }
-
 }

@@ -7,9 +7,20 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test5VM : ViewModelBase
     {
+        private bool _isButtonVisible;
+        public bool IsButtonVisible
+        {
+            get => _isButtonVisible;
+            set => this.RaiseAndSetIfChanged(ref _isButtonVisible, value);
+        }
+        private void UpdateButtonVisibility()
+        {
+            IsButtonVisible = _currentUser?.Role == 2;
+        }
         public Test5VM(User? user = null)
         {
             _currentUser = user;
+            UpdateButtonVisibility();
         }
         public void ToMain()
         {

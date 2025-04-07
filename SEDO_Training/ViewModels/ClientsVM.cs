@@ -5,6 +5,7 @@ using System.Linq;
 using ReactiveUI;
 using SEDO_Training.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Reactive.Subjects;
 
 namespace SEDO_Training.ViewModels
 {
@@ -43,6 +44,43 @@ namespace SEDO_Training.ViewModels
                 AllFilters();
             }
         }
+        private List<Role> _roleFilter;
+
+        public List<Role> RoleFilter
+        {
+            get
+            {
+                if (_roleFilter == null)
+                {
+                    _roleFilter = new List<Role>
+            {
+                new Role() { Id = 0, Role1 = "все" }
+            };
+
+                    var rolesFromDb = MainWindowViewModel.myConnection.Roles?.ToList();
+                    if (rolesFromDb != null)
+                    {
+                        _roleFilter.AddRange(rolesFromDb);
+                    }
+                }
+                return _roleFilter;
+            }
+        }
+
+        private Role _selectedRoleFilter = null;
+
+        public Role SelectedRoleFilter
+        {
+            get
+            {
+                return _selectedRoleFilter ?? RoleFilter[0]; 
+            }
+            set
+            {
+                _selectedRoleFilter = value;
+                AllFilters(); 
+            }
+        }
         void AllFilters()
         {
             UserList = MainWindowViewModel.myConnection.Users.ToList();
@@ -51,6 +89,10 @@ namespace SEDO_Training.ViewModels
                 UserList = UserList.Where(x =>
                     x.Login.ToLower().Contains(_search.ToLower())
                 ).ToList();
+            }
+            if (_selectedRoleFilter != null && _selectedRoleFilter.Id != 0)
+            {
+                UserList = UserList.Where(y => y.RoleNavigation.Id == _selectedRoleFilter.Id).ToList();
             }
         }
 

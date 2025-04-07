@@ -17,8 +17,8 @@
 						Foreground="White" FontWeight="Bold"/>
 				<Button  Command="{Binding ToCourse3}" Content="Вернуться к курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
 						Foreground="White" FontWeight="Bold"/>
-				<Button  Command="{Binding ToPageAddQ3}" Content="Добавить" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
-						Foreground="White" FontWeight="Bold"/>
+				<Button  Command="{Binding ToPageAddQ3}"  IsVisible="{Binding IsButtonVisible}" Content="Добавить" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"  />
 			</StackPanel>
 
 			<ScrollViewer Grid.Row="1">
@@ -35,9 +35,9 @@
 											<Binding Path="Answers"/>
 										</ComboBox.ItemsSource>
 									</ComboBox>
-									<Button Command="{Binding $parent[UserControl].((vm:Test3VM)DataContext).Delete}" CommandParameter="{Binding Id}" Background="#007ACC"
+									<Button Command="{Binding $parent[UserControl].((vm:Test3VM)DataContext).Delete}" CommandParameter="{Binding Id}" Background="#007ACC"  
 						Foreground="White" FontWeight="Bold">Удалить</Button>
-									<Button Command="{Binding $parent[UserControl].((vm:Test3VM)DataContext).Update}" CommandParameter="{Binding Id}" Background="#007ACC"
+									<Button Command="{Binding $parent[UserControl].((vm:Test3VM)DataContext).Update}" CommandParameter="{Binding Id}" Background="#007ACC" 
 					Foreground="White" FontWeight="Bold">Редактировать</Button>
 								</StackPanel>
 							</DataTemplate>

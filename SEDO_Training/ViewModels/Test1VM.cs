@@ -7,12 +7,20 @@ using MsBox.Avalonia.Enums;
 using ReactiveUI;
 using SEDO_Training.Models;
 
-//public string[] Answers => new[] { Answer1, Answer2, Answer3 };
 namespace SEDO_Training.ViewModels
 {
 	public class Test1VM : ViewModelBase
     {
-
+        public bool _isButtonVisible;
+        public bool IsButtonVisible
+        {
+            get => _isButtonVisible;
+            set => this.RaiseAndSetIfChanged(ref _isButtonVisible, value);
+        }
+        public void UpdateButtonVisibility()
+        {
+            IsButtonVisible = _currentUser?.Role == 2;
+        }
         public string[][] Answers => Questions1List.Select(q => new[] { q.Answer1, q.Answer2, q.Answer3 }).ToArray();
 
         public async void Delete(int id)
@@ -28,11 +36,12 @@ namespace SEDO_Training.ViewModels
                 MainWindowViewModel.myConnection.SaveChanges();
                 MainWindowViewModel.Instance.PageContent = new Test1(new Test1VM(_currentUser));
             }
+            UpdateButtonVisibility();
         }
-
         public void Update(int id)
         {
             MainWindowViewModel.Instance.PageContent = new AddQ1(id);
+            UpdateButtonVisibility();
         }
         public void ToPageAddQ1()
         {
@@ -56,13 +65,13 @@ namespace SEDO_Training.ViewModels
                 OnPropertyChanged(nameof(YourSelectedAnswer));
             }
         }
-
         public Test1VM(User? user = null)
         {
             Questions1List = MainWindowViewModel.myConnection.Questions1s.
                                                                ToList();
             CheckAnswersCommand = new RelayCommand(_ => CheckAnswers());
             _currentUser = user;
+            UpdateButtonVisibility();
         }
         private void CheckAnswers()
         {
@@ -75,22 +84,41 @@ namespace SEDO_Training.ViewModels
                 {
                     int selectedAnswerIndex = question.Selectedanswerindex.Value;
 
-                    // Сравниваем с правильным ответом
                     if (selectedAnswerIndex == question.Correctanswerindex)
                     {
                         correctAnswersCount++;
                     }
                 }
-
-                // Устанавливаем Selectedanswerindex в null
                 question.Selectedanswerindex = null;
             }
-
-            // Сохраняем изменения в базе данных
             MainWindowViewModel.myConnection.SaveChanges();
-            MessageBoxManager.GetMessageBoxStandard($"Результат", $"Итого: {correctAnswersCount} б", ButtonEnum.Ok).ShowAsync();
+            MessageBoxManager.GetMessageBoxStandard($"Результат", $"Итого: {correctAnswersCount} ", ButtonEnum.Ok).ShowAsync();
+            AddPointsToUser(correctAnswersCount);
         }
 
+        private void AddPointsToUser(int points)
+        {
+            if (_currentUser == null) return;
+
+            var userTestRecord = MainWindowViewModel.myConnection.UsersTests
+                .FirstOrDefault(ut => ut.Users == _currentUser.Id);
+
+            if (userTestRecord == null)
+            {
+                userTestRecord = new UsersTest
+                {
+                    Users = _currentUser.Id,
+                    Points = points,
+                    Tests = 1
+                };
+                MainWindowViewModel.myConnection.UsersTests.Add(userTestRecord);
+            }
+            else
+            {
+                userTestRecord.Points = points;
+            }
+            MainWindowViewModel.myConnection.SaveChanges();
+        }
         public void ToMain()
         {
             MainWindowViewModel.Instance.PageContent = new Menu(new MenuVM(_currentUser));
