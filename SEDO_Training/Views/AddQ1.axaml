@@ -24,11 +24,12 @@
 					<TextBlock>Введите текст вопроса</TextBlock>
 					<TextBox Text="{Binding NewQ.Questiontext}"></TextBox>
 					<TextBlock>Введите индекс корректного ответа</TextBlock>
-					<ComboBox SelectedItem="{Binding NewQ.Correctanswerindex}" Margin="0,5">
+					<ComboBox SelectedItem="{Binding NewQ.Correctanswerindex, UpdateSourceTrigger=PropertyChanged}"
+          Margin="0,5">
 						<ComboBox.Items>
-							<ComboBoxItem Content="0"/>
-							<ComboBoxItem Content="1"/>
-							<ComboBoxItem Content="2"/>
+							<x:Int32>0</x:Int32>
+							<x:Int32>1</x:Int32>
+							<x:Int32>2</x:Int32>
 						</ComboBox.Items>
 					</ComboBox>
 					<TextBlock>Введите ответ 1</TextBlock>
