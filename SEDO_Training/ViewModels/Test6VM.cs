@@ -24,7 +24,7 @@ namespace SEDO_Training.ViewModels
                 Questions6 delete = MainWindowViewModel.myConnection.Questions6s.First(x => x.Id == id);
                 MainWindowViewModel.myConnection.Questions6s.Remove(delete);
                 MainWindowViewModel.myConnection.SaveChanges();
-                MainWindowViewModel.Instance.PageContent = new Test1();
+                MainWindowViewModel.Instance.PageContent = new Test6(new Test6VM(_currentUser));
             }
         }
         public void Update(int id)
@@ -53,13 +53,12 @@ namespace SEDO_Training.ViewModels
                 OnPropertyChanged(nameof(YourSelectedAnswer));
             }
         }
-
-        public Test6VM()
+        public Test6VM(User? user = null)
         {
             Questions6List = MainWindowViewModel.myConnection.Questions6s.
                                                                ToList();
             CheckAnswersCommand = new RelayCommand(_ => CheckAnswers());
-
+            _currentUser = user;
         }
         private void CheckAnswers()
         {

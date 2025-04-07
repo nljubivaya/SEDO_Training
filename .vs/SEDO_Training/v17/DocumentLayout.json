@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\views\\test_4.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\views\\test_4.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\views\\course4.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\views\\course4.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\viewmodels\\course1vm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\viewmodels\\course1vm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\viewmodels\\clientsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\viewmodels\\clientsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\viewmodels\\menuvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\viewmodels\\menuvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\viewmodels\\authorizationvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\viewmodels\\authorizationvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|c:\\users\\yevge\\source\\repos\\sedo_training\\sedo_training\\views\\menu.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{BD13B4F7-4781-4D8D-9B62-9C95F7BF4EFB}|SEDO_Training\\SEDO_Training.csproj|solutionrelative:sedo_training\\views\\menu.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +34,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Course1VM.cs",
+              "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\Course1VM.cs",
+              "RelativeDocumentMoniker": "SEDO_Training\\ViewModels\\Course1VM.cs",
+              "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\Course1VM.cs",
+              "RelativeToolTip": "SEDO_Training\\ViewModels\\Course1VM.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T18:10:06.551Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Test_4.axaml",
+              "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Test_4.axaml",
+              "RelativeDocumentMoniker": "SEDO_Training\\Views\\Test_4.axaml",
+              "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Test_4.axaml",
+              "RelativeToolTip": "SEDO_Training\\Views\\Test_4.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-07T18:39:20.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Course4.axaml",
+              "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Course4.axaml",
+              "RelativeDocumentMoniker": "SEDO_Training\\Views\\Course4.axaml",
+              "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Course4.axaml",
+              "RelativeToolTip": "SEDO_Training\\Views\\Course4.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-07T18:39:12.631Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -38,41 +88,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthorizationVM.cs",
-              "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\AuthorizationVM.cs",
-              "RelativeDocumentMoniker": "SEDO_Training\\ViewModels\\AuthorizationVM.cs",
-              "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\AuthorizationVM.cs",
-              "RelativeToolTip": "SEDO_Training\\ViewModels\\AuthorizationVM.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAEkAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ClientsVM.cs",
+              "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\ClientsVM.cs",
+              "RelativeDocumentMoniker": "SEDO_Training\\ViewModels\\ClientsVM.cs",
+              "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\ClientsVM.cs",
+              "RelativeToolTip": "SEDO_Training\\ViewModels\\ClientsVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T17:29:33.486Z",
+              "WhenOpened": "2025-04-07T18:10:12.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Course1VM.cs",
-              "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\Course1VM.cs",
-              "RelativeDocumentMoniker": "SEDO_Training\\ViewModels\\Course1VM.cs",
-              "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\Course1VM.cs",
-              "RelativeToolTip": "SEDO_Training\\ViewModels\\Course1VM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T17:29:00.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MenuVM.cs",
               "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\MenuVM.cs",
               "RelativeDocumentMoniker": "SEDO_Training\\ViewModels\\MenuVM.cs",
               "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\ViewModels\\MenuVM.cs",
               "RelativeToolTip": "SEDO_Training\\ViewModels\\MenuVM.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAFIAAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAjwGgAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T17:10:47.83Z",
+              "WhenOpened": "2025-04-07T18:10:05.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Menu.axaml",
+              "DocumentMoniker": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Menu.axaml",
+              "RelativeDocumentMoniker": "SEDO_Training\\Views\\Menu.axaml",
+              "ToolTip": "C:\\Users\\Yevge\\source\\repos\\SEDO_Training\\SEDO_Training\\Views\\Menu.axaml",
+              "RelativeToolTip": "SEDO_Training\\Views\\Menu.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-07T17:43:59.801Z",
               "EditorCaption": ""
             }
           ]

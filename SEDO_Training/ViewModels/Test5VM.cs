@@ -7,6 +7,10 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test5VM : ViewModelBase
     {
+        public Test5VM(User? user = null)
+        {
+            _currentUser = user;
+        }
         public void ToMain()
         {
             MainWindowViewModel.Instance.PageContent = new Menu(new MenuVM(_currentUser));

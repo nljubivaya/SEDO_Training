@@ -12,6 +12,7 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test1VM : ViewModelBase
     {
+
         public string[][] Answers => Questions1List.Select(q => new[] { q.Answer1, q.Answer2, q.Answer3 }).ToArray();
 
         public async void Delete(int id)
@@ -25,7 +26,7 @@ namespace SEDO_Training.ViewModels
                 Questions1 delete = MainWindowViewModel.myConnection.Questions1s.First(x => x.Id == id);
                 MainWindowViewModel.myConnection.Questions1s.Remove(delete);
                 MainWindowViewModel.myConnection.SaveChanges();
-                MainWindowViewModel.Instance.PageContent = new Test1();
+                MainWindowViewModel.Instance.PageContent = new Test1(new Test1VM(_currentUser));
             }
         }
 
@@ -56,12 +57,12 @@ namespace SEDO_Training.ViewModels
             }
         }
 
-        public Test1VM()
+        public Test1VM(User? user = null)
         {
             Questions1List = MainWindowViewModel.myConnection.Questions1s.
                                                                ToList();
             CheckAnswersCommand = new RelayCommand(_ => CheckAnswers());
-
+            _currentUser = user;
         }
         private void CheckAnswers()
         {

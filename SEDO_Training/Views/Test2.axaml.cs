@@ -7,9 +7,9 @@ namespace SEDO_Training;
 
 public partial class Test2 : UserControl
 {
-    public Test2()
+    public Test2(Test2VM viewModel)
     {
         InitializeComponent();
-        DataContext = new Test2VM();
+        DataContext = viewModel;
     }
 }

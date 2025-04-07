@@ -10,9 +10,10 @@ namespace SEDO_Training.ViewModels
     {
         List<Test4> _test4List;
         public List<Test4> Test4List { get => _test4List; set => this.RaiseAndSetIfChanged(ref _test4List, value); }
-        public Test4VM()
+        public Test4VM(User? user = null)
         {
             Test4List = MainWindowViewModel.myConnection.Test4s.ToList();
+            _currentUser = user;
         }
         public void ToMain()
         {

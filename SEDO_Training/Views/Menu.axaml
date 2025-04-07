@@ -10,6 +10,7 @@
 	
 	<UserControl.Resources>
 		<conv:ImageConverter x:Key="ImageConverter"/>
+		<conv:ImageConverter x:Key="RoleToVisibilityConverter"/>
 	</UserControl.Resources>
 
 	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20">
@@ -24,8 +25,15 @@
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
-			<Button Command="{Binding ToClients}" Content="Пользователи" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
-									Foreground="White" FontWeight="Bold"/>
+			<Button Command="{Binding ToClients}"
+        Content="Пользователи"
+        Margin="10"
+        HorizontalAlignment="Right"
+        Background="#007ACC"
+        Foreground="White"
+        FontWeight="Bold"
+        IsEnabled="{Binding ButtonEnabled}" />
+
 
 			<TextBlock Text="Курсы" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10" Grid.Row="0" Grid.ColumnSpan="2"/>
 

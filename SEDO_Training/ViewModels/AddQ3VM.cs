@@ -24,10 +24,11 @@ namespace SEDO_Training.ViewModels
         {
             _newQ = MainWindowViewModel.myConnection.Questions3s.FirstOrDefault(x => x.Id == id) ?? new Questions3();
         }
-
+        private User? _currentUser;
+        public string CurrentUser => _currentUser?.Login;
         public void ToLast()
         {
-            MainWindowViewModel.Instance.PageContent = new Test_3();
+            MainWindowViewModel.Instance.PageContent = new Test_3(new Test3VM(_currentUser));
         }
 
         public async void AddQ3()
@@ -61,7 +62,7 @@ namespace SEDO_Training.ViewModels
                     }
                 }
                 MainWindowViewModel.myConnection.SaveChanges();
-                MainWindowViewModel.Instance.PageContent = new Test_3();
+                MainWindowViewModel.Instance.PageContent = new Test_3(new Test3VM(_currentUser));
             }
         }
     }

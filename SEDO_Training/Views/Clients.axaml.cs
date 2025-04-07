@@ -7,9 +7,9 @@ namespace SEDO_Training;
 
 public partial class Clients : UserControl
 {
-    public Clients()
+    public Clients(ClientsVM viewModel)
     {
         InitializeComponent();
-        DataContext = new ClientsVM();
+        DataContext = viewModel;
     }
 }

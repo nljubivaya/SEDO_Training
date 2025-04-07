@@ -80,6 +80,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Menu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/PersonalAccount.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Yevge/source/repos/SEDO_Training/SEDO_Training/Views/Registration.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

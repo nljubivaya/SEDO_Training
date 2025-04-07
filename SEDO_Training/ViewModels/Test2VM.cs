@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using ReactiveUI;
 using SEDO_Training.Models;
 
@@ -7,6 +8,10 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test2VM : ViewModelBase
     {
+        public Test2VM(User? user = null)
+        {
+            _currentUser = user;
+        }
         public void ToMain()
         {
             MainWindowViewModel.Instance.PageContent = new Menu(new MenuVM(_currentUser));

@@ -12,7 +12,7 @@ namespace SEDO_Training.ViewModels
     {
         private User? _currentUser;
         public string CurrentUser => _currentUser?.Login;
-
+        public bool ButtonEnabled => _currentUser?.Role == 2;
         private List<Course> _courseList;
         public List<Course> CourseList
         {
@@ -53,7 +53,7 @@ namespace SEDO_Training.ViewModels
         }
         public void ToClients()
         {
-            MainWindowViewModel.Instance.PageContent = new Clients();
+            MainWindowViewModel.Instance.PageContent = new Clients(new ClientsVM(_currentUser));
         }
         private async void ShowCourseNotAvailableMessage()
         {
@@ -84,6 +84,37 @@ namespace SEDO_Training.ViewModels
                     break;
                 case 7:
                     MainWindowViewModel.Instance.PageContent = new Course7(new Course1VM(_currentUser));
+                    break;
+                default:
+                    ShowCourseNotAvailableMessage();
+                    break;
+            }
+        }
+
+        public void NavigateToTest(int id)
+        {
+            switch (id)
+            {
+                case 1:
+                    MainWindowViewModel.Instance.PageContent = new Test1(new Test1VM(_currentUser));
+                    break;
+                case 2:
+                    MainWindowViewModel.Instance.PageContent = new Test2(new Test2VM(_currentUser));
+                    break;
+                case 3:
+                    MainWindowViewModel.Instance.PageContent = new Test_3(new Test3VM(_currentUser));
+                    break;
+                case 4:
+                    MainWindowViewModel.Instance.PageContent = new Test_4(new Test4VM(_currentUser));
+                    break;
+                case 5:
+                    MainWindowViewModel.Instance.PageContent = new Test_5(new Test5VM(_currentUser));
+                    break;
+                case 6:
+                    MainWindowViewModel.Instance.PageContent = new Test6(new Test6VM(_currentUser));
+                    break;
+                case 7:
+                    MainWindowViewModel.Instance.PageContent = new Test_7(new Test7VM(_currentUser));
                     break;
                 default:
                     ShowCourseNotAvailableMessage();
