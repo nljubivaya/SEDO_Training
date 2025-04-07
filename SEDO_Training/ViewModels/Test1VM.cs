@@ -11,6 +11,13 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test1VM : ViewModelBase
     {
+        public void Delete(int id)
+        {
+            Questions1 delete = MainWindowViewModel.myConnection.Questions1s.First(x => x.Id == id);
+            MainWindowViewModel.myConnection.Questions1s.Remove(delete);
+            MainWindowViewModel.myConnection.SaveChanges();
+            MainWindowViewModel.Instance.PageContent = new Test1();
+        }
         public void Update(int id)
         {
             MainWindowViewModel.Instance.PageContent = new AddQ1(id);

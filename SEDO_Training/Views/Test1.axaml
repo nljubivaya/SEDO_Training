@@ -35,12 +35,14 @@
 											<Binding Path="Answers"/>
 										</ComboBox.ItemsSource>
 									</ComboBox>
+									<Button Command="{Binding $parent[UserControl].((vm:Test1VM)DataContext).Delete}" CommandParameter="{Binding Id}" Background="#007ACC"
+						Foreground="White" FontWeight="Bold">Удалить</Button>
+									<Button Command="{Binding $parent[UserControl].((vm:Test1VM)DataContext).Update}" CommandParameter="{Binding Id}" Background="#007ACC"
+					Foreground="White" FontWeight="Bold">Редактировать</Button>
 								</StackPanel>
 							</DataTemplate>
 						</ItemsControl.ItemTemplate>
 					</ItemsControl>
-
-
 					<Button Command="{Binding CheckAnswersCommand}" Content="Проверить" Margin="10" HorizontalAlignment="Right" Background="#007ACC"/>
 				</StackPanel>
 			</ScrollViewer>
