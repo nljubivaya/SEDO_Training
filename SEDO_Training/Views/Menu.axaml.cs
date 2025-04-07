@@ -10,12 +10,10 @@ namespace SEDO_Training;
 
 public partial class Menu : UserControl
 {
-    public Menu()
+    public Menu(MenuVM viewModel)
     {
         InitializeComponent();
-
-        this.DataContext = new MenuVM();
-
+        DataContext = viewModel; 
     }
     private void OnCourseButtonClick(object sender, RoutedEventArgs e)
     {

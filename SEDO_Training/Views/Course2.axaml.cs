@@ -7,10 +7,9 @@ namespace SEDO_Training;
 
 public partial class Course2 : UserControl
 {
-    public Course2()
+    public Course2(Course1VM viewModel)
     {
         InitializeComponent();
-
-        DataContext = new Course1VM();
+        DataContext = viewModel;
     }
 }

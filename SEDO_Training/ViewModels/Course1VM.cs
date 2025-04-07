@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using Avalonia.Controls;
 using Avalonia;
 using ReactiveUI;
+using SEDO_Training.Models;
 
 namespace SEDO_Training.ViewModels
 {
 	public class Course1VM : ViewModelBase
     {
+        public Course1VM(User? user = null)
+        {
+            _currentUser = user;
+        }
+
+        private User? _currentUser;
+        public string CurrentUser => _currentUser?.Login;
         public void ToMain()
         {
-            MainWindowViewModel.Instance.PageContent = new Menu();
+            MainWindowViewModel.Instance.PageContent = new Menu(new MenuVM(_currentUser));
         }
+
         public void ToTest1()
         {
             MainWindowViewModel.Instance.PageContent = new Test1();

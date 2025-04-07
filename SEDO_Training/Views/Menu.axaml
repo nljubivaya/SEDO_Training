@@ -24,6 +24,8 @@
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
+			<Button Command="{Binding ToClients}" Content="Пользователи" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
+									Foreground="White" FontWeight="Bold"/>
 
 			<TextBlock Text="Курсы" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10" Grid.Row="0" Grid.ColumnSpan="2"/>
 

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Avalonia.Controls;
 using Microsoft.EntityFrameworkCore;
 using MsBox.Avalonia;
 using MsBox.Avalonia.Enums;
@@ -71,7 +72,8 @@ namespace SEDO_Training.ViewModels
         }
         private void OpenUserWindow(User user)
         {
-            MainWindowViewModel.Instance.PageContent = new Menu { DataContext = new MenuVM(user) };
+            var menuVM = new MenuVM(user);
+            MainWindowViewModel.Instance.PageContent = new Menu(MainWindowViewModel.Instance.MenuVM);
         }
 
         public async Task ExecuteLogin()
@@ -85,16 +87,13 @@ namespace SEDO_Training.ViewModels
 
             if (_currentUser != null)
             {
-                MainWindowViewModel.Instance.PageContent = new Menu { DataContext = new MenuVM(_currentUser) };
+                var menuVM = new MenuVM(_currentUser);
+                MainWindowViewModel.Instance.PageContent = new Menu(menuVM); 
             }
             else
             {
                 await MessageBoxManager.GetMessageBoxStandard("Окно", "Авторизация не успешна", ButtonEnum.Ok).ShowAsync();
             }
-        }
-        public void To1()
-        {
-            MainWindowViewModel.Instance.PageContent = new Course6();
         }
         public void ToRegistration()
         {

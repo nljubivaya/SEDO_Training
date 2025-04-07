@@ -92,11 +92,15 @@ namespace SEDO_Training.ViewModels
 
         public void ToMain()
         {
-            MainWindowViewModel.Instance.PageContent = new Menu();
+            MainWindowViewModel.Instance.PageContent = new Menu(new MenuVM(_currentUser));
         }
+
+        private User? _currentUser;
+        public string CurrentUser => _currentUser?.Login;
         public void ToCourse1()
         {
-            MainWindowViewModel.Instance.PageContent = new Course1();
+            MainWindowViewModel.Instance.PageContent = new Course1(new Course1VM(_currentUser));
         }
+
     }
 }
