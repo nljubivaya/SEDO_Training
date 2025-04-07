@@ -12,7 +12,6 @@ namespace SEDO_Training.ViewModels
 {
 	public class Test1VM : ViewModelBase
     {
-
         public string[][] Answers => Questions1List.Select(q => new[] { q.Answer1, q.Answer2, q.Answer3 }).ToArray();
 
         public async void Delete(int id)
