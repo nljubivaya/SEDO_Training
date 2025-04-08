@@ -14,17 +14,27 @@ namespace SEDO_Training.ViewModels
         private User? _currentUser;
         public string CurrentUser => _currentUser?.Login;
         public bool ButtonEnabled => _currentUser?.Role == 2;
+
         private List<Course> _courseList;
         public List<Course> CourseList
         {
             get => _courseList;
             set => this.RaiseAndSetIfChanged(ref _courseList, value);
         }
+
+        public int _totalPoints;
+        public int TotalPoints
+        {
+            get => _totalPoints;
+            set => this.RaiseAndSetIfChanged(ref _totalPoints, value);
+        }
+
         public MenuVM(User? user = null)
         {
             _currentUser = user;
             Load();
             UpdateButtonVisibility();
+            CalculateTotalPoints(); // Вычисляем общее количество очков при инициализации
         }
 
         private string _search;
@@ -37,6 +47,7 @@ namespace SEDO_Training.ViewModels
                 AllFilters();
             }
         }
+
         private bool _isButtonVisible;
 
         public bool IsButtonVisible
@@ -47,8 +58,9 @@ namespace SEDO_Training.ViewModels
 
         private void UpdateButtonVisibility()
         {
-            IsButtonVisible = _currentUser?.Role == 2; 
+            IsButtonVisible = _currentUser?.Role == 2;
         }
+
         void AllFilters()
         {
             CourseList = MainWindowViewModel.myConnection.Courses.ToList();
@@ -64,17 +76,34 @@ namespace SEDO_Training.ViewModels
         {
             CourseList = MainWindowViewModel.myConnection.Courses.ToList();
         }
+
+        // Метод для вычисления общего количества очков
+        private void CalculateTotalPoints()
+        {
+            if (_currentUser != null)
+            {
+                TotalPoints = MainWindowViewModel.myConnection.UsersTests
+                    .Where(ut => ut.Users == _currentUser.Id)
+                    .Sum(ut => ut.Points ?? 0); 
+            }
+            else
+            {
+                TotalPoints = 0; 
+            }
+        }
+
         public void ToClients()
         {
             MainWindowViewModel.Instance.PageContent = new Clients(new ClientsVM(_currentUser));
         }
+        public void ToTest()
+        {
+            MainWindowViewModel.Instance.PageContent = new Tests(new TestsVM(_currentUser));
+        }
+
         private async void ShowCourseNotAvailableMessage()
         {
             await MessageBoxManager.GetMessageBoxStandard("Информация", "На данный момент курс отсутствует", ButtonEnum.Ok).ShowAsync();
-        }
-        private async void ShowTestNotAvailableMessage()
-        {
-            await MessageBoxManager.GetMessageBoxStandard("Информация", "На данный момент тест отсутствует", ButtonEnum.Ok).ShowAsync();
         }
 
         public void NavigateToCourse(int id)

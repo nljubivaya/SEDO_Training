@@ -22,7 +22,7 @@
 			<Button Command="{Binding ToLast}" Content="Назад" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
 									Foreground="White" FontWeight="Bold"/>
 
-			<TextBlock Text="Курсы" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10" Grid.Row="0" Grid.ColumnSpan="2"/>
+			<TextBlock Text="Пользователи" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10" Grid.Row="0" Grid.ColumnSpan="2"/>
 			<TextBox Watermark="Поиск" Text="{Binding Search}" Grid.Row="1" Margin="10" Height="40" Padding="10" BorderThickness="1" BorderBrush="#007ACC" Width="300" HorizontalAlignment="Left"/>
 			<ComboBox ItemsSource="{Binding RoleFilter}" SelectedItem="{Binding SelectedRoleFilter}" Grid.Row="1" Margin="320,10,0,0"  BorderThickness="1" BorderBrush="#007ACC" >
 				<ComboBox.ItemTemplate>
@@ -43,7 +43,7 @@
 					</ItemsControl.ItemsPanel>
 					<ItemsControl.ItemTemplate>
 						<DataTemplate>
-							<Border BorderThickness="2" BorderBrush="#007ACC" CornerRadius="10" Margin="10" Padding="10" Width="300" Height="350">
+							<Border BorderThickness="2" BorderBrush="#007ACC" CornerRadius="10" Margin="10" Padding="10" Width="300" Height="175">
 								<StackPanel>
 									<TextBlock Text="{Binding Login}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Margin="0,5" TextWrapping="Wrap" MaxWidth="280"/>
 									<TextBlock Text="{Binding RoleNavigation.Role1}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Margin="0,5" TextWrapping="Wrap" MaxWidth="280"/>

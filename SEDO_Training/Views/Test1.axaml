@@ -28,6 +28,7 @@
 						<ItemsControl.ItemTemplate>
 							<DataTemplate>
 								<StackPanel Margin="20">
+									
 									<TextBlock Text="{Binding Questiontext}" FontSize="20" Margin="0,10" TextWrapping="Wrap"/>
 									<ComboBox Width="400" Margin="0,10"
 											  SelectedIndex="{Binding Selectedanswerindex, Mode=TwoWay}">

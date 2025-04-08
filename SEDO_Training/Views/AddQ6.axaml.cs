@@ -7,14 +7,15 @@ namespace SEDO_Training;
 
 public partial class AddQ6 : UserControl
 {
-    public AddQ6()
+    public AddQ6(AddQ6VM viewModel)
     {
-        InitializeComponent(); 
-        DataContext = new AddQ6VM();
+        InitializeComponent();
+        DataContext = viewModel;
     }
-    public AddQ6(int id)
+    public AddQ6(int id, AddQ6VM viewModel)
     {
         InitializeComponent();
         DataContext = new AddQ6VM(id);
+        DataContext = viewModel;
     }
 }

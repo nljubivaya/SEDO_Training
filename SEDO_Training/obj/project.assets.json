@@ -2,11 +2,11 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "Avalonia/11.2.5": {
+      "Avalonia/11.2.6": {
         "type": "package",
         "dependencies": {
           "Avalonia.BuildServices": "0.0.31",
-          "Avalonia.Remote.Protocol": "11.2.5",
+          "Avalonia.Remote.Protocol": "11.2.6",
           "MicroCom.Runtime": "0.11.0"
         },
         "compile": {
@@ -141,14 +141,14 @@
           }
         }
       },
-      "Avalonia.Desktop/11.2.5": {
+      "Avalonia.Desktop/11.2.6": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.2.5",
-          "Avalonia.Native": "11.2.5",
-          "Avalonia.Skia": "11.2.5",
-          "Avalonia.Win32": "11.2.5",
-          "Avalonia.X11": "11.2.5"
+          "Avalonia": "11.2.6",
+          "Avalonia.Native": "11.2.6",
+          "Avalonia.Skia": "11.2.6",
+          "Avalonia.Win32": "11.2.6",
+          "Avalonia.X11": "11.2.6"
         },
         "compile": {
           "lib/net8.0/Avalonia.Desktop.dll": {
@@ -196,10 +196,10 @@
           }
         }
       },
-      "Avalonia.FreeDesktop/11.2.5": {
+      "Avalonia.FreeDesktop/11.2.6": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.2.5",
+          "Avalonia": "11.2.6",
           "Tmds.DBus.Protocol": "0.20.0"
         },
         "compile": {
@@ -213,10 +213,10 @@
           }
         }
       },
-      "Avalonia.Native/11.2.5": {
+      "Avalonia.Native/11.2.6": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.2.5"
+          "Avalonia": "11.2.6"
         },
         "compile": {
           "lib/net8.0/Avalonia.Native.dll": {
@@ -235,10 +235,10 @@
           }
         }
       },
-      "Avalonia.ReactiveUI/11.2.5": {
+      "Avalonia.ReactiveUI/11.2.6": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.2.5",
+          "Avalonia": "11.2.6",
           "ReactiveUI": "20.1.1",
           "System.Reactive": "6.0.1"
         },
@@ -253,7 +253,7 @@
           }
         }
       },
-      "Avalonia.Remote.Protocol/11.2.5": {
+      "Avalonia.Remote.Protocol/11.2.6": {
         "type": "package",
         "compile": {
           "lib/net8.0/Avalonia.Remote.Protocol.dll": {
@@ -266,10 +266,10 @@
           }
         }
       },
-      "Avalonia.Skia/11.2.5": {
+      "Avalonia.Skia/11.2.6": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.2.5",
+          "Avalonia": "11.2.6",
           "HarfBuzzSharp": "7.3.0.3",
           "HarfBuzzSharp.NativeAssets.Linux": "7.3.0.3",
           "HarfBuzzSharp.NativeAssets.WebAssembly": "7.3.0.3",
@@ -320,10 +320,10 @@
           }
         }
       },
-      "Avalonia.Win32/11.2.5": {
+      "Avalonia.Win32/11.2.6": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.2.5",
+          "Avalonia": "11.2.6",
           "Avalonia.Angle.Windows.Natives": "2.1.22045.20230930"
         },
         "compile": {
@@ -337,12 +337,12 @@
           }
         }
       },
-      "Avalonia.X11/11.2.5": {
+      "Avalonia.X11/11.2.6": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.2.5",
-          "Avalonia.FreeDesktop": "11.2.5",
-          "Avalonia.Skia": "11.2.5"
+          "Avalonia": "11.2.6",
+          "Avalonia.FreeDesktop": "11.2.6",
+          "Avalonia.Skia": "11.2.6"
         },
         "compile": {
           "lib/net8.0/Avalonia.X11.dll": {
@@ -1154,6 +1154,24 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.NETCore.Targets/1.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
       "Mono.TextTemplating/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -1487,6 +1505,21 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.Console/4.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.2",
+          "System.IO": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Console.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Diagnostics.DiagnosticSource/9.0.3": {
         "type": "package",
         "compile": {
@@ -1508,6 +1541,21 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.IO/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.IO.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.IO.Pipelines/9.0.3": {
@@ -1561,6 +1609,18 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
@@ -1575,6 +1635,19 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Text.Encoding.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Text.Encodings.Web/9.0.3": {
@@ -1635,6 +1708,19 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.Threading.Tasks/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Threading.Tasks.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Tmds.DBus.Protocol/0.20.0": {
         "type": "package",
         "dependencies": {
@@ -1650,10 +1736,10 @@
     }
   },
   "libraries": {
-    "Avalonia/11.2.5": {
-      "sha512": "drAn4ymqy6c1AWIzpQIFLIQjPx9p7Ffsu+7bYy4vV8MtvmgiQ2s6R5HvmNuWheUtpHyhnowVQoOdJQl5uS6a+A==",
+    "Avalonia/11.2.6": {
+      "sha512": "Z92CH5hMnI/gAWgNC4fyK07YRN33jpP9DS39cjii4pXXzaOhjNEKopecGZjcjZaAzeFPJWI6+UKnXFe2wf0ovA==",
       "type": "package",
-      "path": "avalonia/11.2.5",
+      "path": "avalonia/11.2.6",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1661,7 +1747,7 @@
         "Icon.png",
         "analyzers/dotnet/cs/Avalonia.Analyzers.dll",
         "analyzers/dotnet/cs/Avalonia.Generators.dll",
-        "avalonia.11.2.5.nupkg.sha512",
+        "avalonia.11.2.6.nupkg.sha512",
         "avalonia.nuspec",
         "build/Avalonia.Generators.props",
         "build/Avalonia.props",
@@ -1889,15 +1975,15 @@
         "lib/netstandard2.0/Avalonia.Controls.DataGrid.xml"
       ]
     },
-    "Avalonia.Desktop/11.2.5": {
-      "sha512": "ITvTEiELiHftwDe1+HkpZWc6PedQfdhNYIQxIl3npyD0QTYJjn+tdlloZxmO3z0b6Rbr7XK6aTOOH6L/itBIRg==",
+    "Avalonia.Desktop/11.2.6": {
+      "sha512": "x3GhSQj24+yzRJ5r435JeIfEMThGfhcXDpCU3qNdf8j6FI4mRaGGLhPk7CVlL7k//kr1gYaYFtE8vgab6Cyhsg==",
       "type": "package",
-      "path": "avalonia.desktop/11.2.5",
+      "path": "avalonia.desktop/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.desktop.11.2.5.nupkg.sha512",
+        "avalonia.desktop.11.2.6.nupkg.sha512",
         "avalonia.desktop.nuspec",
         "lib/net6.0/Avalonia.Desktop.dll",
         "lib/net6.0/Avalonia.Desktop.xml",
@@ -1943,15 +2029,15 @@
         "lib/netstandard2.0/Avalonia.Fonts.Inter.xml"
       ]
     },
-    "Avalonia.FreeDesktop/11.2.5": {
-      "sha512": "JFvgnPhwqtd+xOpnlmBcZIdHVRA6ctfMHLo/W/pXcbVIel+3HOJSUk4NMREj48AD3ZyQiZJvKED1C4EDvkzXcw==",
+    "Avalonia.FreeDesktop/11.2.6": {
+      "sha512": "eRu99QcnJYvNl4rBT626L9oyctP4rhNmrv6h+ARcIJWVmvJIYl6UJoWTEL9UA3jlw6tBE+MdBPr2b3c5Y36ppw==",
       "type": "package",
-      "path": "avalonia.freedesktop/11.2.5",
+      "path": "avalonia.freedesktop/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.freedesktop.11.2.5.nupkg.sha512",
+        "avalonia.freedesktop.11.2.6.nupkg.sha512",
         "avalonia.freedesktop.nuspec",
         "lib/net6.0/Avalonia.FreeDesktop.dll",
         "lib/net6.0/Avalonia.FreeDesktop.xml",
@@ -1961,15 +2047,15 @@
         "lib/netstandard2.0/Avalonia.FreeDesktop.xml"
       ]
     },
-    "Avalonia.Native/11.2.5": {
-      "sha512": "zubOZRBqOETn9uque9pEmUERIasSRL/Va4HQ+dtd+uA+2ThVL9Jo+yp3+NeV2qwrLUcAA/uNd9C+WmG4qB6MvA==",
+    "Avalonia.Native/11.2.6": {
+      "sha512": "VtDBdjmvB8xQD5EAdmrOJ116+r3eSGrnB1FnTYdZv2jHLtoMaZnXWFGye0ZxXlXyzkoxW3yR0t7pB4Lj2YJRDw==",
       "type": "package",
-      "path": "avalonia.native/11.2.5",
+      "path": "avalonia.native/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.native.11.2.5.nupkg.sha512",
+        "avalonia.native.11.2.6.nupkg.sha512",
         "avalonia.native.nuspec",
         "lib/net6.0/Avalonia.Native.dll",
         "lib/net6.0/Avalonia.Native.xml",
@@ -1980,15 +2066,15 @@
         "runtimes/osx/native/libAvaloniaNative.dylib"
       ]
     },
-    "Avalonia.ReactiveUI/11.2.5": {
-      "sha512": "2dzvhqcpjV2QyUb3PBZzCJcDLFvQx3Axkx6W3AcCOU6vcNj01XKZwAkXYPhJQz2r3kSlfuUyDSiEnhSmRyAktA==",
+    "Avalonia.ReactiveUI/11.2.6": {
+      "sha512": "U45px6NRdMxOPSsUVkTgjripRJQ2EUiGYit0MkZTBcX/hk2CsQbUhw/i9OYW7ofVz5YlVi3rUhzwXqe7fzLo1A==",
       "type": "package",
-      "path": "avalonia.reactiveui/11.2.5",
+      "path": "avalonia.reactiveui/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.reactiveui.11.2.5.nupkg.sha512",
+        "avalonia.reactiveui.11.2.6.nupkg.sha512",
         "avalonia.reactiveui.nuspec",
         "lib/net6.0/Avalonia.ReactiveUI.dll",
         "lib/net6.0/Avalonia.ReactiveUI.xml",
@@ -1998,15 +2084,15 @@
         "lib/netstandard2.0/Avalonia.ReactiveUI.xml"
       ]
     },
-    "Avalonia.Remote.Protocol/11.2.5": {
-      "sha512": "wS/qPTRVmgB49PxVMEFRczWS2UQ91Sl7xBI4qQtVyyi+REeH5L0sXYTjyKkHALI/vZd4DeH4SrleDEX0zNOVmA==",
+    "Avalonia.Remote.Protocol/11.2.6": {
+      "sha512": "0DVvZW6awq5piAnKD6+sb6JB30zY9wlaZPfR8vhRsvlJGZUx4By24SOku3cHZIvnS1Yxwca+IY5lr99FlJtF+Q==",
       "type": "package",
-      "path": "avalonia.remote.protocol/11.2.5",
+      "path": "avalonia.remote.protocol/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.remote.protocol.11.2.5.nupkg.sha512",
+        "avalonia.remote.protocol.11.2.6.nupkg.sha512",
         "avalonia.remote.protocol.nuspec",
         "lib/net6.0/Avalonia.Remote.Protocol.dll",
         "lib/net6.0/Avalonia.Remote.Protocol.xml",
@@ -2016,15 +2102,15 @@
         "lib/netstandard2.0/Avalonia.Remote.Protocol.xml"
       ]
     },
-    "Avalonia.Skia/11.2.5": {
-      "sha512": "rUjWmLtx2E95DyzUzHGx7PBQwr+sa0Tt64Jd72s3eEALLQU13RUnwqHkUZv0g8uzNRTsWcKHden4eIyCc+dcNQ==",
+    "Avalonia.Skia/11.2.6": {
+      "sha512": "1Y6JsUzmE4EH7txZewFG6TFhNX3Pfh9JijQSxtsu+RssrqrebsfXGm9eBEUJeGslFT4Okafl7rOM0SkHBR7xeg==",
       "type": "package",
-      "path": "avalonia.skia/11.2.5",
+      "path": "avalonia.skia/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.skia.11.2.5.nupkg.sha512",
+        "avalonia.skia.11.2.6.nupkg.sha512",
         "avalonia.skia.nuspec",
         "lib/net6.0/Avalonia.Skia.dll",
         "lib/net6.0/Avalonia.Skia.xml",
@@ -2070,15 +2156,15 @@
         "lib/netstandard2.0/Avalonia.Themes.Simple.xml"
       ]
     },
-    "Avalonia.Win32/11.2.5": {
-      "sha512": "hu9ECEq2ycaoBBcAQ1ZH/hnocyn79rYem4Jueyggp5urRa1xlNeQFradWEcWD9xQWAgE6pCEKa5fu8QXvLnGDw==",
+    "Avalonia.Win32/11.2.6": {
+      "sha512": "qsB+w/NOdoK6TUJXBfbAzhPGtlLHnzbB/Q3PC593h4eDq3M6Vp1yPw0R2SHFikcJJvpsXabnsT56R4l+1Lb9ug==",
       "type": "package",
-      "path": "avalonia.win32/11.2.5",
+      "path": "avalonia.win32/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.win32.11.2.5.nupkg.sha512",
+        "avalonia.win32.11.2.6.nupkg.sha512",
         "avalonia.win32.nuspec",
         "lib/net6.0/Avalonia.Win32.dll",
         "lib/net6.0/Avalonia.Win32.xml",
@@ -2088,15 +2174,15 @@
         "lib/netstandard2.0/Avalonia.Win32.xml"
       ]
     },
-    "Avalonia.X11/11.2.5": {
-      "sha512": "rkf1xqsH6t4zc5j2KeJ2oTbyUyMsiEemgnwOgnHW/bgpeW4DDhZgiZ8xdFIxnvayAoYD+5WhPAEs8ztQNTr8qg==",
+    "Avalonia.X11/11.2.6": {
+      "sha512": "wWPkfrRARRkwvd4lE2wm7drK+L3vuITleYs6LPsG8e/eeiDKaxRegUkcyzulXxQgqq/h6D44aWiHpWQOPiSnWw==",
       "type": "package",
-      "path": "avalonia.x11/11.2.5",
+      "path": "avalonia.x11/11.2.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.x11.11.2.5.nupkg.sha512",
+        "avalonia.x11.11.2.6.nupkg.sha512",
         "avalonia.x11.nuspec",
         "lib/net6.0/Avalonia.X11.dll",
         "lib/net6.0/Avalonia.X11.xml",
@@ -3792,6 +3878,36 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json"
+      ]
+    },
+    "Microsoft.NETCore.Targets/1.1.2": {
+      "sha512": "wETQM2IJ1uP//roY/Yz7f7NnJPzX8xgxux9+hVvkXtD1Yr6VsXefS9KZIO3He18LD7h7ACgirp5rNlEeNI0ynA==",
+      "type": "package",
+      "path": "microsoft.netcore.targets/1.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.targets.1.1.2.nupkg.sha512",
+        "microsoft.netcore.targets.nuspec",
+        "runtime.json"
+      ]
+    },
     "Mono.TextTemplating/3.0.0": {
       "sha512": "YqueG52R/Xej4VVbKuRIodjiAhV0HR/XVbLbNrJhCZnzjnSjgMJ/dCdV0akQQxavX6hp/LC6rqLGLcXeQYU7XA==",
       "type": "package",
@@ -4377,6 +4493,44 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Console/4.3.1": {
+      "sha512": "6iKDG36vugpW230eBGMLL6GQIx+Buf5txz6DFC1c4MOH8qcOo2mFzId6GsJUTptR4AusnDsdUeCYuzDiftD39w==",
+      "type": "package",
+      "path": "system.console/4.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Console.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Console.dll",
+        "ref/netstandard1.3/System.Console.dll",
+        "ref/netstandard1.3/System.Console.xml",
+        "ref/netstandard1.3/de/System.Console.xml",
+        "ref/netstandard1.3/es/System.Console.xml",
+        "ref/netstandard1.3/fr/System.Console.xml",
+        "ref/netstandard1.3/it/System.Console.xml",
+        "ref/netstandard1.3/ja/System.Console.xml",
+        "ref/netstandard1.3/ko/System.Console.xml",
+        "ref/netstandard1.3/ru/System.Console.xml",
+        "ref/netstandard1.3/zh-hans/System.Console.xml",
+        "ref/netstandard1.3/zh-hant/System.Console.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.console.4.3.1.nupkg.sha512",
+        "system.console.nuspec"
+      ]
+    },
     "System.Diagnostics.DiagnosticSource/9.0.3": {
       "sha512": "cBA+28xDW33tSiGht/H8xvr8lnaCrgJ7EdO348AfSGsX4PPJUOULKxny/cc9DVNGExaCrtqagsnm5M2mkWIZ+g==",
       "type": "package",
@@ -4407,6 +4561,87 @@
         "system.diagnostics.diagnosticsource.9.0.3.nupkg.sha512",
         "system.diagnostics.diagnosticsource.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.IO/4.3.0": {
+      "sha512": "3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "type": "package",
+      "path": "system.io/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.IO.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.IO.dll",
+        "ref/netcore50/System.IO.dll",
+        "ref/netcore50/System.IO.xml",
+        "ref/netcore50/de/System.IO.xml",
+        "ref/netcore50/es/System.IO.xml",
+        "ref/netcore50/fr/System.IO.xml",
+        "ref/netcore50/it/System.IO.xml",
+        "ref/netcore50/ja/System.IO.xml",
+        "ref/netcore50/ko/System.IO.xml",
+        "ref/netcore50/ru/System.IO.xml",
+        "ref/netcore50/zh-hans/System.IO.xml",
+        "ref/netcore50/zh-hant/System.IO.xml",
+        "ref/netstandard1.0/System.IO.dll",
+        "ref/netstandard1.0/System.IO.xml",
+        "ref/netstandard1.0/de/System.IO.xml",
+        "ref/netstandard1.0/es/System.IO.xml",
+        "ref/netstandard1.0/fr/System.IO.xml",
+        "ref/netstandard1.0/it/System.IO.xml",
+        "ref/netstandard1.0/ja/System.IO.xml",
+        "ref/netstandard1.0/ko/System.IO.xml",
+        "ref/netstandard1.0/ru/System.IO.xml",
+        "ref/netstandard1.0/zh-hans/System.IO.xml",
+        "ref/netstandard1.0/zh-hant/System.IO.xml",
+        "ref/netstandard1.3/System.IO.dll",
+        "ref/netstandard1.3/System.IO.xml",
+        "ref/netstandard1.3/de/System.IO.xml",
+        "ref/netstandard1.3/es/System.IO.xml",
+        "ref/netstandard1.3/fr/System.IO.xml",
+        "ref/netstandard1.3/it/System.IO.xml",
+        "ref/netstandard1.3/ja/System.IO.xml",
+        "ref/netstandard1.3/ko/System.IO.xml",
+        "ref/netstandard1.3/ru/System.IO.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.xml",
+        "ref/netstandard1.5/System.IO.dll",
+        "ref/netstandard1.5/System.IO.xml",
+        "ref/netstandard1.5/de/System.IO.xml",
+        "ref/netstandard1.5/es/System.IO.xml",
+        "ref/netstandard1.5/fr/System.IO.xml",
+        "ref/netstandard1.5/it/System.IO.xml",
+        "ref/netstandard1.5/ja/System.IO.xml",
+        "ref/netstandard1.5/ko/System.IO.xml",
+        "ref/netstandard1.5/ru/System.IO.xml",
+        "ref/netstandard1.5/zh-hans/System.IO.xml",
+        "ref/netstandard1.5/zh-hant/System.IO.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.io.4.3.0.nupkg.sha512",
+        "system.io.nuspec"
       ]
     },
     "System.IO.Pipelines/9.0.3": {
@@ -4493,6 +4728,98 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Runtime/4.3.0": {
+      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "type": "package",
+      "path": "system.runtime/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Runtime.dll",
+        "lib/portable-net45+win8+wp80+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.xml",
+        "ref/netcore50/de/System.Runtime.xml",
+        "ref/netcore50/es/System.Runtime.xml",
+        "ref/netcore50/fr/System.Runtime.xml",
+        "ref/netcore50/it/System.Runtime.xml",
+        "ref/netcore50/ja/System.Runtime.xml",
+        "ref/netcore50/ko/System.Runtime.xml",
+        "ref/netcore50/ru/System.Runtime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.0/System.Runtime.dll",
+        "ref/netstandard1.0/System.Runtime.xml",
+        "ref/netstandard1.0/de/System.Runtime.xml",
+        "ref/netstandard1.0/es/System.Runtime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.xml",
+        "ref/netstandard1.0/it/System.Runtime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.2/System.Runtime.dll",
+        "ref/netstandard1.2/System.Runtime.xml",
+        "ref/netstandard1.2/de/System.Runtime.xml",
+        "ref/netstandard1.2/es/System.Runtime.xml",
+        "ref/netstandard1.2/fr/System.Runtime.xml",
+        "ref/netstandard1.2/it/System.Runtime.xml",
+        "ref/netstandard1.2/ja/System.Runtime.xml",
+        "ref/netstandard1.2/ko/System.Runtime.xml",
+        "ref/netstandard1.2/ru/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.3/System.Runtime.dll",
+        "ref/netstandard1.3/System.Runtime.xml",
+        "ref/netstandard1.3/de/System.Runtime.xml",
+        "ref/netstandard1.3/es/System.Runtime.xml",
+        "ref/netstandard1.3/fr/System.Runtime.xml",
+        "ref/netstandard1.3/it/System.Runtime.xml",
+        "ref/netstandard1.3/ja/System.Runtime.xml",
+        "ref/netstandard1.3/ko/System.Runtime.xml",
+        "ref/netstandard1.3/ru/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.5/System.Runtime.dll",
+        "ref/netstandard1.5/System.Runtime.xml",
+        "ref/netstandard1.5/de/System.Runtime.xml",
+        "ref/netstandard1.5/es/System.Runtime.xml",
+        "ref/netstandard1.5/fr/System.Runtime.xml",
+        "ref/netstandard1.5/it/System.Runtime.xml",
+        "ref/netstandard1.5/ja/System.Runtime.xml",
+        "ref/netstandard1.5/ko/System.Runtime.xml",
+        "ref/netstandard1.5/ru/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.xml",
+        "ref/portable-net45+win8+wp80+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.4.3.0.nupkg.sha512",
+        "system.runtime.nuspec"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "type": "package",
@@ -4516,6 +4843,74 @@
         "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Text.Encoding/4.3.0": {
+      "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "type": "package",
+      "path": "system.text.encoding/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Text.Encoding.dll",
+        "ref/netcore50/System.Text.Encoding.xml",
+        "ref/netcore50/de/System.Text.Encoding.xml",
+        "ref/netcore50/es/System.Text.Encoding.xml",
+        "ref/netcore50/fr/System.Text.Encoding.xml",
+        "ref/netcore50/it/System.Text.Encoding.xml",
+        "ref/netcore50/ja/System.Text.Encoding.xml",
+        "ref/netcore50/ko/System.Text.Encoding.xml",
+        "ref/netcore50/ru/System.Text.Encoding.xml",
+        "ref/netcore50/zh-hans/System.Text.Encoding.xml",
+        "ref/netcore50/zh-hant/System.Text.Encoding.xml",
+        "ref/netstandard1.0/System.Text.Encoding.dll",
+        "ref/netstandard1.0/System.Text.Encoding.xml",
+        "ref/netstandard1.0/de/System.Text.Encoding.xml",
+        "ref/netstandard1.0/es/System.Text.Encoding.xml",
+        "ref/netstandard1.0/fr/System.Text.Encoding.xml",
+        "ref/netstandard1.0/it/System.Text.Encoding.xml",
+        "ref/netstandard1.0/ja/System.Text.Encoding.xml",
+        "ref/netstandard1.0/ko/System.Text.Encoding.xml",
+        "ref/netstandard1.0/ru/System.Text.Encoding.xml",
+        "ref/netstandard1.0/zh-hans/System.Text.Encoding.xml",
+        "ref/netstandard1.0/zh-hant/System.Text.Encoding.xml",
+        "ref/netstandard1.3/System.Text.Encoding.dll",
+        "ref/netstandard1.3/System.Text.Encoding.xml",
+        "ref/netstandard1.3/de/System.Text.Encoding.xml",
+        "ref/netstandard1.3/es/System.Text.Encoding.xml",
+        "ref/netstandard1.3/fr/System.Text.Encoding.xml",
+        "ref/netstandard1.3/it/System.Text.Encoding.xml",
+        "ref/netstandard1.3/ja/System.Text.Encoding.xml",
+        "ref/netstandard1.3/ko/System.Text.Encoding.xml",
+        "ref/netstandard1.3/ru/System.Text.Encoding.xml",
+        "ref/netstandard1.3/zh-hans/System.Text.Encoding.xml",
+        "ref/netstandard1.3/zh-hant/System.Text.Encoding.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.text.encoding.4.3.0.nupkg.sha512",
+        "system.text.encoding.nuspec"
       ]
     },
     "System.Text.Encodings.Web/9.0.3": {
@@ -4650,6 +5045,74 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Threading.Tasks/4.3.0": {
+      "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "type": "package",
+      "path": "system.threading.tasks/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Threading.Tasks.dll",
+        "ref/netcore50/System.Threading.Tasks.xml",
+        "ref/netcore50/de/System.Threading.Tasks.xml",
+        "ref/netcore50/es/System.Threading.Tasks.xml",
+        "ref/netcore50/fr/System.Threading.Tasks.xml",
+        "ref/netcore50/it/System.Threading.Tasks.xml",
+        "ref/netcore50/ja/System.Threading.Tasks.xml",
+        "ref/netcore50/ko/System.Threading.Tasks.xml",
+        "ref/netcore50/ru/System.Threading.Tasks.xml",
+        "ref/netcore50/zh-hans/System.Threading.Tasks.xml",
+        "ref/netcore50/zh-hant/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/System.Threading.Tasks.dll",
+        "ref/netstandard1.0/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/de/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/es/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/fr/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/it/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/ja/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/ko/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/ru/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/zh-hans/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/zh-hant/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/System.Threading.Tasks.dll",
+        "ref/netstandard1.3/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/de/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/es/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/fr/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/it/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/ja/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/ko/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/ru/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.Tasks.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.4.3.0.nupkg.sha512",
+        "system.threading.tasks.nuspec"
+      ]
+    },
     "Tmds.DBus.Protocol/0.20.0": {
       "sha512": "2gkt2kuYPhDKd8gtl34jZSJOnn4nRJfFngCDcTZT/uySbK++ua0YQx2418l9Rn1Y4dE5XNq6zG9ZsE5ltLlNNw==",
       "type": "package",
@@ -4668,15 +5131,16 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Avalonia >= 11.2.5",
-      "Avalonia.Desktop >= 11.2.5",
+      "Avalonia >= 11.2.6",
+      "Avalonia.Desktop >= 11.2.6",
       "Avalonia.Diagnostics >= 11.2.5",
       "Avalonia.Fonts.Inter >= 11.2.5",
-      "Avalonia.ReactiveUI >= 11.2.5",
+      "Avalonia.ReactiveUI >= 11.2.6",
       "Avalonia.Themes.Fluent >= 11.2.5",
       "MessageBox.Avalonia >= 3.2.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.3",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4"
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
+      "System.Console >= 4.3.1"
     ]
   },
   "packageFolders": {
@@ -4726,11 +5190,11 @@
         "dependencies": {
           "Avalonia": {
             "target": "Package",
-            "version": "[11.2.5, )"
+            "version": "[11.2.6, )"
           },
           "Avalonia.Desktop": {
             "target": "Package",
-            "version": "[11.2.5, )"
+            "version": "[11.2.6, )"
           },
           "Avalonia.Diagnostics": {
             "target": "Package",
@@ -4742,7 +5206,7 @@
           },
           "Avalonia.ReactiveUI": {
             "target": "Package",
-            "version": "[11.2.5, )"
+            "version": "[11.2.6, )"
           },
           "Avalonia.Themes.Fluent": {
             "target": "Package",
@@ -4761,6 +5225,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[9.0.4, )"
+          },
+          "System.Console": {
+            "target": "Package",
+            "version": "[4.3.1, )"
           }
         },
         "imports": [

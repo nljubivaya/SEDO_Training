@@ -24,6 +24,10 @@ namespace SEDO_Training.ViewModels
                 OnPropertyChanged(nameof(Login));
             }
         }
+        public void ToAuth()
+        {
+            MainWindowViewModel.Instance.PageContent = new Authorization();
+        }
         public string Password
         {
             get => _password;

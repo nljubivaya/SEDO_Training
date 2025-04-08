@@ -18,9 +18,10 @@ namespace SEDO_Training.ViewModels
             get => _newQ;
             set => this.RaiseAndSetIfChanged(ref _newQ, value);
         }
-        public AddQ1VM()
+        public AddQ1VM(User? user = null)
         {
             _newQ = new Questions1();
+            _currentUser = user;
         }
         public AddQ1VM(int id)
         {

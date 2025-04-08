@@ -38,11 +38,11 @@ namespace SEDO_Training.ViewModels
         }
         public void Update(int id)
         {
-            MainWindowViewModel.Instance.PageContent = new AddQ3(id);
+            MainWindowViewModel.Instance.PageContent = new AddQ3(id, new AddQ3VM(_currentUser));
         }
         public void ToPageAddQ3()
         {
-            MainWindowViewModel.Instance.PageContent = new AddQ3();
+            MainWindowViewModel.Instance.PageContent = new AddQ3(new AddQ3VM(_currentUser));
         }
         private List<Questions3> _questions3List;
         public List<Questions3> Questions3List
@@ -118,7 +118,7 @@ namespace SEDO_Training.ViewModels
         }
         public void ToMain()
         {
-            MainWindowViewModel.Instance.PageContent = new Menu(new MenuVM(_currentUser));
+            MainWindowViewModel.Instance.PageContent = new Tests(new TestsVM(_currentUser));
         }
         private User? _currentUser;
         public string CurrentUser => _currentUser?.Login;

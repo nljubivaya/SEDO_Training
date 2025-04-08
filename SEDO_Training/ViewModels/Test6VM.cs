@@ -38,11 +38,11 @@ namespace SEDO_Training.ViewModels
         }
         public void Update(int id)
         {
-            MainWindowViewModel.Instance.PageContent = new AddQ6(id);
+            MainWindowViewModel.Instance.PageContent = new AddQ6(id, new AddQ6VM(_currentUser));
         }
         public void ToPageAddQ6()
         {
-            MainWindowViewModel.Instance.PageContent = new AddQ6();
+            MainWindowViewModel.Instance.PageContent = new AddQ6(new AddQ6VM(_currentUser));
         }
         private List<Questions6> _questions6List;
         public List<Questions6> Questions6List
@@ -78,7 +78,7 @@ namespace SEDO_Training.ViewModels
             {
                 // Проверяем, выбран ли ответ
                 if (question.Selectedanswerindex.HasValue)
-                {
+                { 
                     int selectedAnswerIndex = question.Selectedanswerindex.Value;
 
                     if (selectedAnswerIndex == question.Correctanswerindex)
@@ -119,7 +119,7 @@ namespace SEDO_Training.ViewModels
 
         public void ToMain()
         {
-            MainWindowViewModel.Instance.PageContent = new Menu(new MenuVM(_currentUser));
+            MainWindowViewModel.Instance.PageContent = new Tests(new TestsVM(_currentUser));
         }
 
         private User? _currentUser;

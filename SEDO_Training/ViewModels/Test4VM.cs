@@ -28,7 +28,7 @@ namespace SEDO_Training.ViewModels
         }
         public void ToMain()
         {
-            MainWindowViewModel.Instance.PageContent = new Menu(new MenuVM(_currentUser));
+            MainWindowViewModel.Instance.PageContent = new Tests(new TestsVM(_currentUser));
         }
 
         private User? _currentUser;
