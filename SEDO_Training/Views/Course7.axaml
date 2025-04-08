@@ -29,13 +29,13 @@
 					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
 						<StackPanel Margin="5">
 						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
-							<Image Source="avares://SEDO_Training/Assets/Otchet/st1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+							<Image Source="avares://SEDO_Training/Assets/Stamp/st1.PNG" Width="350" Height="150" Stretch="Uniform"/>
 						</Border>
 						<TextBlock Text="Кнопка предварительного просмотра штампа" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
 					</StackPanel>
 					<StackPanel Margin="5">
 						<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
-							<Image Source="avares://SEDO_Training/Assets/Otchet/st2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+							<Image Source="avares://SEDO_Training/Assets/Stamp/st2.PNG" Width="350" Height="150" Stretch="Uniform"/>
 						</Border>
 						<TextBlock Text="Пример предварительного просмотра штампа" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
 						</StackPanel>
@@ -84,19 +84,19 @@
 					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
 						<StackPanel Margin="5">
 							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
-								<Image Source="avares://SEDO_Training/Assets/Otchet/d1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+								<Image Source="avares://SEDO_Training/Assets/Stamp/d1.PNG" Width="350" Height="150" Stretch="Uniform"/>
 							</Border>
 							<TextBlock Text="Окно мастера наложения штампов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
 						</StackPanel>
 						<StackPanel Margin="5">
 							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
-								<Image Source="avares://SEDO_Training/Assets/Otchet/d2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+								<Image Source="avares://SEDO_Training/Assets/Stamp/d2.PNG" Width="350" Height="150" Stretch="Uniform"/>
 							</Border>
 							<TextBlock Text="Наложение штампа на документ" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
 						</StackPanel>
 						<StackPanel Margin="5">
 							<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
-								<Image Source="avares://SEDO_Training/Assets/Otchet/d3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+								<Image Source="avares://SEDO_Training/Assets/Stamp/d3.PNG" Width="350" Height="150" Stretch="Uniform"/>
 							</Border>
 							<TextBlock Text="Файл отображения с наложенным штампом" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
 						</StackPanel>
@@ -119,19 +119,19 @@
 	<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
 		<StackPanel Margin="5">
 			<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
-				<Image Source="avares://SEDO_Training/Assets/Otchet/s3.PNG" Width="350" Height="150" Stretch="Uniform"/>
+				<Image Source="avares://SEDO_Training/Assets/Stamp/s3.PNG" Width="350" Height="150" Stretch="Uniform"/>
 			</Border>
 			<TextBlock Text="Наложение нескольких штампов регистрационных данных на документ" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
 		</StackPanel>
 		<StackPanel Margin="5">
 			<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
-				<Image Source="avares://SEDO_Training/Assets/Otchet/s2.PNG" Width="350" Height="150" Stretch="Uniform"/>
+				<Image Source="avares://SEDO_Training/Assets/Stamp/s2.PNG" Width="350" Height="150" Stretch="Uniform"/>
 			</Border>
 			<TextBlock Text="Нанесение штампа на последней странице между должностью и ФИО" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
 		</StackPanel>
 		<StackPanel Margin="5">
 			<Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Padding="5">
-				<Image Source="avares://SEDO_Training/Assets/Otchet/s1.PNG" Width="350" Height="150" Stretch="Uniform"/>
+				<Image Source="avares://SEDO_Training/Assets/Stamp/s1.PNG" Width="350" Height="150" Stretch="Uniform"/>
 			</Border>
 			<TextBlock Text="Удаление всех наложенных штампов" FontSize="14" HorizontalAlignment="Center" Margin="0,5"/>
 		</StackPanel>

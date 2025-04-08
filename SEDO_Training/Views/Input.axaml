@@ -1,0 +1,61 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="350"
+			  xmlns:vm="using:SEDO_Training.ViewModels"
+			 x:DataType="vm:InputVM"
+             x:Class="SEDO_Training.Input">
+	<Grid>
+		<Border BorderThickness="2" BorderBrush="#007ACC" CornerRadius="10" Margin="10"
+                Width="400" Height="400"
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+			<Border.Background>
+				<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+					<GradientStop Color="#FFFFFF" Offset="0.0"/>
+					<GradientStop Color="#A0D3E8" Offset="1.0"/>
+				</LinearGradientBrush>
+			</Border.Background>
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+
+				<Button Content="✖"
+                        Width="40" Height="40"
+                        HorizontalAlignment="Right" VerticalAlignment="Top"
+                        Command="{Binding ToMenu}"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        FontSize="16"
+                        Foreground="#007ACC"
+                        Margin="5,10,10,5"/>
+
+				<TextBlock Text="Ваши предложения" FontSize="20" FontWeight="Bold"
+                           HorizontalAlignment="Center" Margin="0,10"
+                           Grid.Row="1" FontFamily="Segoe UI"/>
+
+				<TextBlock Text="Пожалуйста, поделитесь темами, которые вас интересуют, для создания новых курсов и тестов. Ваше мнение очень важно для нас, и мы стремимся предложить наиболее актуальные и полезные материалы."
+           FontSize="16" TextWrapping="Wrap"
+           HorizontalAlignment="Center" Margin="0,10"
+           Grid.Row="2" FontFamily="Segoe UI"
+           TextAlignment="Center"/>
+
+				<TextBox Text="{Binding NewOf.Offers}" Grid.Row="3"
+                         Margin="10,10,10,5" VerticalAlignment="Center"
+                         Height="30" Background="White"
+                         HorizontalAlignment="Stretch"/>
+
+				<Button Content="Отправить" Grid.Row="4"
+                        HorizontalAlignment="Center" Margin="0,5,0,10"
+                        Command="{Binding AddOffCommand}" Width="100" Background="#007ACC"
+                        Foreground="White" FontWeight="Bold"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

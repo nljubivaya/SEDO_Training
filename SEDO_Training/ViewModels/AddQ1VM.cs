@@ -45,7 +45,7 @@ namespace SEDO_Training.ViewModels
                     await MessageBoxManager.GetMessageBoxStandard("Ошибка",
                                                                    "Индекс корректного ответа должен быть от 0 до 2.",
                                                                    ButtonEnum.Ok).ShowAsync();
-                    return; // Прерываем выполнение метода, если индекс некорректен
+                    return; 
                 }
                 if (NewQ.Id == 0)
                 {

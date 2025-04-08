@@ -17,6 +17,8 @@ public partial class PodgotovkaContext : DbContext
 
     public virtual DbSet<Course> Courses { get; set; }
 
+    public virtual DbSet<Offer> Offers { get; set; }
+
     public virtual DbSet<Questions1> Questions1s { get; set; }
 
     public virtual DbSet<Questions3> Questions3s { get; set; }
@@ -58,6 +60,16 @@ public partial class PodgotovkaContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("photo");
             entity.Property(e => e.Uk).HasColumnName("uk");
+        });
+
+        modelBuilder.Entity<Offer>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("offers_pkey");
+
+            entity.ToTable("offers");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Offers).HasColumnName("offers");
         });
 
         modelBuilder.Entity<Questions1>(entity =>
@@ -155,7 +167,7 @@ public partial class PodgotovkaContext : DbContext
                 .ValueGeneratedNever()
                 .HasColumnName("id");
             entity.Property(e => e.Description)
-                .HasMaxLength(100)
+                .HasMaxLength(500)
                 .HasColumnName("description");
             entity.Property(e => e.Name)
                 .HasMaxLength(100)

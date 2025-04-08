@@ -18,6 +18,4 @@ public partial class Questions1
     public string? Answer3 { get; set; }
 
     public int? Selectedanswerindex { get; set; }
-   
-
 }

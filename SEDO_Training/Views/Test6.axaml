@@ -12,40 +12,54 @@
 				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
+
 			<StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Stretch">
 				<Button Command="{Binding ToMain}" Content="На главную" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
 						Foreground="White" FontWeight="Bold"/>
-				<Button  Command="{Binding ToCourse6}" Content="Вернуться к курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
+				<Button Command="{Binding ToCourse6}" Content="Вернуться к курсу" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
 						Foreground="White" FontWeight="Bold"/>
-				<Button  Command="{Binding ToPageAddQ6}" Content="Добавить" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
+				<Button Command="{Binding ToPageAddQ6}" Content="Добавить" Margin="10" HorizontalAlignment="Left" Background="#007ACC"
 						Foreground="White" FontWeight="Bold" IsVisible="{Binding IsButtonVisible}"/>
 			</StackPanel>
 
 			<ScrollViewer Grid.Row="1">
 				<StackPanel>
 					<TextBlock Text="Тест по теме «Добавление скан-образов результатов потокового сканирования»" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+
+					<!-- Разделительная ячейка -->
+					<Border Background="#007ACC" Height="2" Margin="0,10"/>
+
 					<ItemsControl ItemsSource="{Binding Questions6List}">
 						<ItemsControl.ItemTemplate>
 							<DataTemplate>
-								<StackPanel Margin="20">
-									<TextBlock Text="{Binding Questiontext}" FontSize="20" Margin="0,10" TextWrapping="Wrap"/>
-									<ComboBox Width="400" Margin="0,10"
-											  SelectedIndex="{Binding Selectedanswerindex, Mode=TwoWay}">
-										<ComboBox.ItemsSource>
-											<Binding Path="Answers"/>
-										</ComboBox.ItemsSource>
-									</ComboBox>
-									<Button Command="{Binding $parent[UserControl].((vm:Test6VM)DataContext).Delete}" CommandParameter="{Binding Id}" Background="#007ACC"
-						Foreground="White" FontWeight="Bold">Удалить</Button>
-									<Button Command="{Binding $parent[UserControl].((vm:Test6VM)DataContext).Update}" CommandParameter="{Binding Id}" Background="#007ACC"
-					Foreground="White" FontWeight="Bold">Редактировать</Button>
-								</StackPanel>
+								<Border BorderThickness="2" BorderBrush="#007ACC" CornerRadius="10" Margin="10" Padding="10">
+									<Border.Background>
+										<LinearGradientBrush>
+											<GradientStop Color="#A0D3E8" Offset="0.0"/>
+											<GradientStop Color="#E0F7FA" Offset="1.0"/>
+										</LinearGradientBrush>
+									</Border.Background>
+									<StackPanel Margin="20">
+										<TextBlock Text="{Binding Questiontext}" FontSize="20" Margin="0,10" TextWrapping="Wrap"/>
+										<ComboBox Width="400" Margin="0,10" SelectedIndex="{Binding Selectedanswerindex, Mode=TwoWay}">
+											<ComboBox.ItemsSource>
+												<Binding Path="Answers"/>
+											</ComboBox.ItemsSource>
+										</ComboBox>
+										<Button Command="{Binding $parent[UserControl].((vm:Test6VM)DataContext).Delete}" CommandParameter="{Binding Id}" Background="#007ACC"
+												Foreground="White" FontWeight="Bold">Удалить</Button>
+										<Button Command="{Binding $parent[UserControl].((vm:Test6VM)DataContext).Update}" CommandParameter="{Binding Id}" Background="#007ACC"
+												Foreground="White" FontWeight="Bold">Редактировать</Button>
+									</StackPanel>
+								</Border>
 							</DataTemplate>
 						</ItemsControl.ItemTemplate>
 					</ItemsControl>
-					<Button Command="{Binding CheckAnswersCommand}" Content="Проверить" Margin="10" HorizontalAlignment="Right" Background="#007ACC"/>
+
+					<Button Command="{Binding CheckAnswersCommand}" Content="Проверить" Foreground="White" Margin="10" HorizontalAlignment="Right" Background="#007ACC"/>
 				</StackPanel>
 			</ScrollViewer>
 		</Grid>
 	</Border>
+
 </UserControl>

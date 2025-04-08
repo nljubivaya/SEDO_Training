@@ -16,15 +16,10 @@
 		<Grid VerticalAlignment="Top">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto"/>
-				<!-- Заголовок -->
 				<RowDefinition Height="Auto"/>
-				<!-- Информация о пользователе -->
 				<RowDefinition Height="Auto"/>
-				<!-- Разделитель -->
 				<RowDefinition Height="*"/>
-				<!-- Прокручиваемое содержимое -->
 				<RowDefinition Height="Auto"/>
-				<!-- Для кнопки "Курсы" -->
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*"/>
@@ -64,20 +59,28 @@
 					</ItemsControl.ItemsPanel>
 					<ItemsControl.ItemTemplate>
 						<DataTemplate>
-							<Border BorderThickness="2" BorderBrush="#007ACC" CornerRadius="10" Margin="10" Padding="10" Width="300" Height="250">
+							<Border BorderThickness="2" BorderBrush="#007ACC" CornerRadius="10" Margin="10" Padding="10" Width="300" Height="400">
 								<Border.Background>
 									<LinearGradientBrush>
 										<GradientStop Color="#FFFFFF" Offset="0.0"/>
 										<GradientStop Color="#A0D3E8" Offset="1.0"/>
 									</LinearGradientBrush>
 								</Border.Background>
-								<StackPanel>
-									<TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Margin="0,5" TextWrapping="Wrap" MaxWidth="280"/>
-									<TextBlock Text="{Binding Description}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Margin="0,5" TextWrapping="Wrap" MaxWidth="280"/>
-									<Image Height="120" Width="120" Source="{Binding Photo, Converter={StaticResource ImageConverter}}" Margin="5" HorizontalAlignment="Center"/>
-									<Button Content="Пройти тест" HorizontalAlignment="Center" Margin="5" Background="#007ACC" Foreground="White" FontWeight="Bold" FontSize="16" Click="OnTestButtonClick"/>
-								</StackPanel>
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition Height="Auto"/>
+										<RowDefinition Height="Auto"/>
+										<RowDefinition Height="*"/>
+										<RowDefinition Height="Auto"/>
+									</Grid.RowDefinitions>
+									<TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Margin="0,5" TextWrapping="Wrap" MaxWidth="280" Grid.Row="0"/>
+									<TextBlock Text="{Binding Description}" FontSize="16" HorizontalAlignment="Center" Margin="0,5" TextWrapping="Wrap" MaxWidth="280" Grid.Row="1"/>
+									<Image Height="120" Width="120" Source="{Binding Photo, Converter={StaticResource ImageConverter}}" Margin="5" HorizontalAlignment="Center" Grid.Row="2"/>
+
+									<Button Content="Пройти тест" HorizontalAlignment="Center" Margin="5" Background="#007ACC" Foreground="White" FontWeight="Bold" FontSize="16" Click="OnTestButtonClick" Grid.Row="3"/>
+								</Grid>
 							</Border>
+
 						</DataTemplate>
 					</ItemsControl.ItemTemplate>
 				</ItemsControl>

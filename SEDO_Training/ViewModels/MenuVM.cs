@@ -11,6 +11,7 @@ namespace SEDO_Training.ViewModels
     public class MenuVM : ViewModelBase
     {
 
+
         private User? _currentUser;
         public string CurrentUser => _currentUser?.Login;
         public bool ButtonEnabled => _currentUser?.Role == 2;
@@ -100,7 +101,10 @@ namespace SEDO_Training.ViewModels
         {
             MainWindowViewModel.Instance.PageContent = new Tests(new TestsVM(_currentUser));
         }
-
+        public void ToInput()
+        {
+            MainWindowViewModel.Instance.PageContent = new Input(new InputVM(_currentUser));
+        }
         private async void ShowCourseNotAvailableMessage()
         {
             await MessageBoxManager.GetMessageBoxStandard("Информация", "На данный момент курс отсутствует", ButtonEnum.Ok).ShowAsync();
