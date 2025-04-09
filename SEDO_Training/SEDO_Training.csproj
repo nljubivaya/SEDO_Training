@@ -58,6 +58,7 @@
     <None Remove="Assets\DocElements\soder.jpg" />
     <None Remove="Assets\DocElements\sroch.jpg" />
     <None Remove="Assets\DocElements\vid.jpg" />
+    <None Remove="Assets\edi.png" />
     <None Remove="Assets\eye.png" />
     <None Remove="Assets\eye_off.png" />
     <None Remove="Assets\logo.png" />

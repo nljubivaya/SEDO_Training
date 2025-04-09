@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using DynamicData;
 using System.Linq;
@@ -54,7 +54,7 @@ namespace SEDO_Training.ViewModels
                 {
                     _roleFilter = new List<Role>
             {
-                new Role() { Id = 0, Role1 = "âñå" }
+                new Role() { Id = 0, Role1 = "Ã¢Ã±Ã¥" }
             };
 
                     var rolesFromDb = MainWindowViewModel.myConnection.Roles?.ToList();
@@ -73,13 +73,19 @@ namespace SEDO_Training.ViewModels
         {
             get
             {
-                return _selectedRoleFilter ?? RoleFilter[0]; 
+                return _selectedRoleFilter ?? RoleFilter[0];
             }
             set
             {
                 _selectedRoleFilter = value;
-                AllFilters(); 
+                AllFilters();
             }
+        }
+      
+        public void Update(int userId)
+        {
+            MainWindowViewModel.Instance.PageContent = new EditUser(new EditUserVM(userId));
+
         }
         void AllFilters()
         {
