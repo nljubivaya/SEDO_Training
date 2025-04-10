@@ -51,7 +51,7 @@ namespace SEDO_Training.ViewModels
             get => _UsersTest1;
             set => this.RaiseAndSetIfChanged(ref _UsersTest1, value);
         }
-        public void ToLast(int userId)
+        public void ToLast()
         {
             MainWindowViewModel.Instance.PageContent = new Clients(new ClientsVM(_currentUser));
 
@@ -78,7 +78,6 @@ namespace SEDO_Training.ViewModels
                 this.RaiseAndSetIfChanged(ref _selectedRole, value);
             }
         }
-
         public async void AddUs()
         {
             var result = await MessageBoxManager.GetMessageBoxStandard("Подтвердить действие",
@@ -91,12 +90,13 @@ namespace SEDO_Training.ViewModels
                 {
                     existingUs.Login = NewU.Login;
                     existingUs.Password = NewU.Password;
-                    existingUs.Role = NewU.Role; // Устанавливаем роль из выбранной
+                    existingUs.Role = SelectedRole?.Id; 
                 }
                 MainWindowViewModel.myConnection.SaveChanges();
                 MainWindowViewModel.Instance.PageContent = new Clients(new ClientsVM(_currentUser));
             }
         }
+
     }
 }
   

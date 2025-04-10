@@ -54,7 +54,7 @@ namespace SEDO_Training.ViewModels
                 {
                     _roleFilter = new List<Role>
             {
-                new Role() { Id = 0, Role1 = "âñå" }
+                new Role() { Id = 0, Role1 = "все" }
             };
 
                     var rolesFromDb = MainWindowViewModel.myConnection.Roles?.ToList();
