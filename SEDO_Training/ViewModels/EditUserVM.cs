@@ -26,7 +26,6 @@ namespace SEDO_Training.ViewModels
         {
             _currentUser = user;
         }
-
         public EditUserVM(int userId)
         {
             _newU = MainWindowViewModel.myConnection.Users
@@ -34,14 +33,13 @@ namespace SEDO_Training.ViewModels
                 .Include(x => x.UsersTests)
                 .ThenInclude(x => x.TestsNavigation)
                 .FirstOrDefault(x => x.Id == userId) ?? new User();
-
+            SelectedRole = _newU.RoleNavigation;
             UsersTest = NewU.UsersTests.ToList();
             if (_newU == null)
             {
                 Console.WriteLine($"Пользователь с ID {userId} не найден.");
             }
         }
-
         public List<Test> Tests => MainWindowViewModel.myConnection.Tests
             .ToList()
             .Except(_newU.UsersTests.Select(x => x.TestsNavigation))
@@ -53,18 +51,34 @@ namespace SEDO_Training.ViewModels
             get => _UsersTest1;
             set => this.RaiseAndSetIfChanged(ref _UsersTest1, value);
         }
-
-        private string _selectedRole;
-        public string SelectedRole
-        {
-            get => _selectedRole;
-            set => this.RaiseAndSetIfChanged(ref _selectedRole, value);
-        }
         public void ToLast(int userId)
         {
             MainWindowViewModel.Instance.PageContent = new Clients(new ClientsVM(_currentUser));
 
         }
+        private List<Role> _roles;
+        public List<Role> Roles
+        {
+            get
+            {
+                if (_roles == null)
+                {
+                    _roles = MainWindowViewModel.myConnection.Roles.ToList();
+                }
+                return _roles;
+            }
+        }
+        private Role _selectedRole;
+        public Role SelectedRole
+        {
+            get => _selectedRole ?? _newU.RoleNavigation; // Устанавливаем текущую роль
+            set
+            {
+                _selectedRole = value;
+                this.RaiseAndSetIfChanged(ref _selectedRole, value);
+            }
+        }
+
         public async void AddUs()
         {
             var result = await MessageBoxManager.GetMessageBoxStandard("Подтвердить действие",

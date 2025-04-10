@@ -34,6 +34,18 @@
 							</ComboBox.ItemTemplate>
 						</ComboBox>
 					</StackPanel>-->
+					<StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+						<TextBlock Margin="10" Text="Выберите роль " FontWeight="Bold"></TextBlock>
+						<ComboBox Margin="5" HorizontalAlignment="Left"
+                                  ItemsSource="{Binding Roles}"
+                                  SelectedItem="{Binding SelectedRole}">
+							<ComboBox.ItemTemplate>
+								<DataTemplate>
+									<TextBlock Text="{Binding Role1}"></TextBlock>
+								</DataTemplate>
+							</ComboBox.ItemTemplate>
+						</ComboBox>
+					</StackPanel>
 				</StackPanel>
 			</ScrollViewer>
 		</Grid>
