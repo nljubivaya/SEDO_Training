@@ -6,5 +6,42 @@
                xmlns:vm="using:SEDO_Training.ViewModels"
 			 x:DataType="vm:AddQ2VM"
 			 x:Class="SEDO_Training.AddQ2">
- 
+	<Border BorderThickness="2" BorderBrush="#007ACC" Padding="20" CornerRadius="10" Margin="20" Background="#F7F7F7">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Stretch">
+				<Button Command="{Binding ToLast}" Content="Назад" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"/>
+
+			</StackPanel>
+
+			<ScrollViewer Grid.Row="1">
+				<StackPanel>
+					<TextBlock Text="Новый вопрос" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10"/>
+					<TextBlock>Введите текст вопроса</TextBlock>
+					<TextBox Text="{Binding NewQ.Questiontext}"></TextBox>
+					<TextBlock>Введите индекс корректного ответа</TextBlock>
+					<ComboBox SelectedItem="{Binding NewQ.Correctanswerindex, UpdateSourceTrigger=PropertyChanged}"
+          Margin="0,5">
+						<ComboBox.Items>
+							<x:Int32>0</x:Int32>
+							<x:Int32>1</x:Int32>
+							<x:Int32>2</x:Int32>
+						</ComboBox.Items>
+					</ComboBox>
+					<TextBlock>Введите ответ 1</TextBlock>
+					<TextBox Text="{Binding NewQ.Answer1}"></TextBox>
+					<TextBlock>Введите ответ 2</TextBlock>
+					<TextBox Text="{Binding NewQ.Answer2}"></TextBox>
+					<TextBlock>Введите ответ 3</TextBlock>
+					<TextBox Text="{Binding NewQ.Answer3}"></TextBox>
+					<Button Command="{Binding AddQ2}" Content="Сохранить" Margin="10" HorizontalAlignment="Right" Background="#007ACC"
+						Foreground="White" FontWeight="Bold"></Button>
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+	</Border>
 </UserControl>

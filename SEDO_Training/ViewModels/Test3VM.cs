@@ -33,7 +33,7 @@ namespace SEDO_Training.ViewModels
                 Questions3 delete = MainWindowViewModel.myConnection.Questions3s.First(x => x.Id == id);
                 MainWindowViewModel.myConnection.Questions3s.Remove(delete);
                 MainWindowViewModel.myConnection.SaveChanges();
-                MainWindowViewModel.Instance.PageContent = new Test1(new Test1VM(_currentUser));
+                MainWindowViewModel.Instance.PageContent = new Test_3(new Test3VM(_currentUser));
             }
         }
         public void Update(int id)

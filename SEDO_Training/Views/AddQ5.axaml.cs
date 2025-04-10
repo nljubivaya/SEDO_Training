@@ -15,7 +15,7 @@ public partial class AddQ5 : UserControl
     public AddQ5(int id, AddQ5VM viewModel)
     {
         InitializeComponent();
-        //DataContext = new AddQ5VM(id);
+        DataContext = new AddQ5VM(id);
         DataContext = viewModel;
     }
 

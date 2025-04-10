@@ -10,8 +10,6 @@ namespace SEDO_Training.ViewModels
 {
 	public class AddQ5VM : ViewModelBase
     {
-        private User? _currentUser;
-        public string CurrentUser => _currentUser?.Login;
         private Questions5 _newQ;
         public Questions5 NewQ
         {
@@ -27,7 +25,8 @@ namespace SEDO_Training.ViewModels
         {
             _newQ = MainWindowViewModel.myConnection.Questions5s.FirstOrDefault(x => x.Id == id) ?? new Questions5();
         }
-
+        private User? _currentUser;
+        public string CurrentUser => _currentUser?.Login;
         public void ToLast()
         {
             MainWindowViewModel.Instance.PageContent = new Test_5(new Test5VM(_currentUser));
