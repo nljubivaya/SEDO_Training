@@ -80,30 +80,22 @@ namespace SEDO_Training.ViewModels
 
             foreach (var question in Questions1List)
             {
-                // Проверяем, выбран ли ответ
                 if (question.Selectedanswerindex.HasValue)
                 {
                     int selectedAnswerIndex = question.Selectedanswerindex.Value;
-
-                    // Проверяем правильность ответа
                     if (selectedAnswerIndex == question.Correctanswerindex)
                     {
-                        correctAnswersCount++; // Увеличиваем счетчик правильных ответов
+                        correctAnswersCount++; 
 
                     }
                 }
-                // Сбрасываем выбранный ответ для следующей проверки
                 question.Selectedanswerindex = null;
             }
 
             MainWindowViewModel.myConnection.SaveChanges();
             MessageBoxManager.GetMessageBoxStandard($"Результат", $"Итого: {correctAnswersCount} ", ButtonEnum.Ok).ShowAsync();
             AddPointsToUser(correctAnswersCount);
-        
-
-        MainWindowViewModel.myConnection.SaveChanges();
-            MessageBoxManager.GetMessageBoxStandard($"Результат", $"Итого: {correctAnswersCount} ", ButtonEnum.Ok).ShowAsync();
-            AddPointsToUser(correctAnswersCount);
+  
         }
 
         private void AddPointsToUser(int points)
@@ -140,6 +132,5 @@ namespace SEDO_Training.ViewModels
         {
             MainWindowViewModel.Instance.PageContent = new Course1(new Course1VM(_currentUser));
         }
-
     }
 }

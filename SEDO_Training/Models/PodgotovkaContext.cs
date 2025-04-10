@@ -21,9 +21,17 @@ public partial class PodgotovkaContext : DbContext
 
     public virtual DbSet<Questions1> Questions1s { get; set; }
 
+    public virtual DbSet<Questions2> Questions2s { get; set; }
+
     public virtual DbSet<Questions3> Questions3s { get; set; }
 
+    public virtual DbSet<Questions4> Questions4s { get; set; }
+
+    public virtual DbSet<Questions5> Questions5s { get; set; }
+
     public virtual DbSet<Questions6> Questions6s { get; set; }
+
+    public virtual DbSet<Questions7> Questions7s { get; set; }
 
     public virtual DbSet<Role> Roles { get; set; }
 
@@ -97,6 +105,29 @@ public partial class PodgotovkaContext : DbContext
             entity.Property(e => e.Selectedanswerindex).HasColumnName("selectedanswerindex");
         });
 
+        modelBuilder.Entity<Questions2>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("questions2_pkey");
+
+            entity.ToTable("questions2");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Answer1)
+                .HasMaxLength(500)
+                .HasColumnName("answer1");
+            entity.Property(e => e.Answer2)
+                .HasMaxLength(500)
+                .HasColumnName("answer2");
+            entity.Property(e => e.Answer3)
+                .HasMaxLength(500)
+                .HasColumnName("answer3");
+            entity.Property(e => e.Correctanswerindex).HasColumnName("correctanswerindex");
+            entity.Property(e => e.Questiontext)
+                .HasMaxLength(500)
+                .HasColumnName("questiontext");
+            entity.Property(e => e.Selectedanswerindex).HasColumnName("selectedanswerindex");
+        });
+
         modelBuilder.Entity<Questions3>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("questions3_pkey");
@@ -120,11 +151,80 @@ public partial class PodgotovkaContext : DbContext
             entity.Property(e => e.Selectedanswerindex).HasColumnName("selectedanswerindex");
         });
 
+        modelBuilder.Entity<Questions4>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("questions4_pkey");
+
+            entity.ToTable("questions4");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Answer1)
+                .HasMaxLength(500)
+                .HasColumnName("answer1");
+            entity.Property(e => e.Answer2)
+                .HasMaxLength(500)
+                .HasColumnName("answer2");
+            entity.Property(e => e.Answer3)
+                .HasMaxLength(500)
+                .HasColumnName("answer3");
+            entity.Property(e => e.Correctanswerindex).HasColumnName("correctanswerindex");
+            entity.Property(e => e.Questiontext)
+                .HasMaxLength(500)
+                .HasColumnName("questiontext");
+            entity.Property(e => e.Selectedanswerindex).HasColumnName("selectedanswerindex");
+        });
+
+        modelBuilder.Entity<Questions5>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("questions5_pkey");
+
+            entity.ToTable("questions5");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Answer1)
+                .HasMaxLength(500)
+                .HasColumnName("answer1");
+            entity.Property(e => e.Answer2)
+                .HasMaxLength(500)
+                .HasColumnName("answer2");
+            entity.Property(e => e.Answer3)
+                .HasMaxLength(500)
+                .HasColumnName("answer3");
+            entity.Property(e => e.Correctanswerindex).HasColumnName("correctanswerindex");
+            entity.Property(e => e.Questiontext)
+                .HasMaxLength(500)
+                .HasColumnName("questiontext");
+            entity.Property(e => e.Selectedanswerindex).HasColumnName("selectedanswerindex");
+        });
+
         modelBuilder.Entity<Questions6>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("questions6_pkey");
 
             entity.ToTable("questions6");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Answer1)
+                .HasMaxLength(500)
+                .HasColumnName("answer1");
+            entity.Property(e => e.Answer2)
+                .HasMaxLength(500)
+                .HasColumnName("answer2");
+            entity.Property(e => e.Answer3)
+                .HasMaxLength(500)
+                .HasColumnName("answer3");
+            entity.Property(e => e.Correctanswerindex).HasColumnName("correctanswerindex");
+            entity.Property(e => e.Questiontext)
+                .HasMaxLength(500)
+                .HasColumnName("questiontext");
+            entity.Property(e => e.Selectedanswerindex).HasColumnName("selectedanswerindex");
+        });
+
+        modelBuilder.Entity<Questions7>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("questions7_pkey");
+
+            entity.ToTable("questions7");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Answer1)
