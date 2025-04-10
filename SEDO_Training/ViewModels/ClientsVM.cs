@@ -53,9 +53,9 @@ namespace SEDO_Training.ViewModels
                 if (_roleFilter == null)
                 {
                     _roleFilter = new List<Role>
-            {
-                new Role() { Id = 0, Role1 = "все" }
-            };
+                    {
+                        new Role() { Id = 0, Role1 = "все" }
+                    };
 
                     var rolesFromDb = MainWindowViewModel.myConnection.Roles?.ToList();
                     if (rolesFromDb != null)
@@ -81,12 +81,12 @@ namespace SEDO_Training.ViewModels
                 AllFilters();
             }
         }
-      
+
         public void Update(int userId)
         {
-            MainWindowViewModel.Instance.PageContent = new EditUser(new EditUserVM(userId));
-
+            MainWindowViewModel.Instance.PageContent = new EditUser(userId, _currentUser); // Передаем текущего пользователя
         }
+
         void AllFilters()
         {
             UserList = MainWindowViewModel.myConnection.Users.ToList();

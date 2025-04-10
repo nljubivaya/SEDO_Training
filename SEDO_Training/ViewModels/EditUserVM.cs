@@ -26,20 +26,27 @@ namespace SEDO_Training.ViewModels
         {
             _currentUser = user;
         }
-        public EditUserVM(int userId)
+        public EditUserVM(int id, User? currentUser)
         {
+            _currentUser = currentUser;
             _newU = MainWindowViewModel.myConnection.Users
                 .Include(x => x.RoleNavigation)
                 .Include(x => x.UsersTests)
                 .ThenInclude(x => x.TestsNavigation)
-                .FirstOrDefault(x => x.Id == userId) ?? new User();
-            SelectedRole = _newU.RoleNavigation;
-            UsersTest = NewU.UsersTests.ToList();
+                .FirstOrDefault(x => x.Id == id) ?? new User();
+
             if (_newU == null)
             {
-                Console.WriteLine($"Пользователь с ID {userId} не найден.");
+                Console.WriteLine($"Пользователь с ID {id} не найден.");
+            }
+            else
+            {
+                Console.WriteLine($"Найден пользователь: {_newU.Login}, Роль: {_newU.RoleNavigation?.Role1}");
+                SelectedRole = _newU.RoleNavigation;
+                UsersTest = _newU.UsersTests.ToList();
             }
         }
+
         public List<Test> Tests => MainWindowViewModel.myConnection.Tests
             .ToList()
             .Except(_newU.UsersTests.Select(x => x.TestsNavigation))
@@ -71,13 +78,14 @@ namespace SEDO_Training.ViewModels
         private Role _selectedRole;
         public Role SelectedRole
         {
-            get => _selectedRole ?? _newU.RoleNavigation; // Устанавливаем текущую роль
+            get => _selectedRole ?? _newU.RoleNavigation;
             set
             {
                 _selectedRole = value;
                 this.RaiseAndSetIfChanged(ref _selectedRole, value);
             }
         }
+
         public async void AddUs()
         {
             var result = await MessageBoxManager.GetMessageBoxStandard("Подтвердить действие",
