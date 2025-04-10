@@ -44,9 +44,14 @@ namespace SEDO_Training.ViewModels
                 Console.WriteLine($"Найден пользователь: {_newU.Login}, Роль: {_newU.RoleNavigation?.Role1}");
                 SelectedRole = _newU.RoleNavigation;
                 UsersTest = _newU.UsersTests.ToList();
+                LoadCurrentUserTests();
             }
         }
-
+        public List<UsersTest> CurrentUserTests { get; set; } = new List<UsersTest>();
+        private void LoadCurrentUserTests()
+        {
+            CurrentUserTests = _newU.UsersTests.ToList();
+        }
         public List<Test> Tests => MainWindowViewModel.myConnection.Tests
             .ToList()
             .Except(_newU.UsersTests.Select(x => x.TestsNavigation))
@@ -85,6 +90,7 @@ namespace SEDO_Training.ViewModels
                 this.RaiseAndSetIfChanged(ref _selectedRole, value);
             }
         }
+
 
         public async void AddUs()
         {

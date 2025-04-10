@@ -84,7 +84,7 @@ namespace SEDO_Training.ViewModels
 
         public void Update(int userId)
         {
-            MainWindowViewModel.Instance.PageContent = new EditUser(userId, _currentUser); // Передаем текущего пользователя
+            MainWindowViewModel.Instance.PageContent = new EditUser(userId, _currentUser);
         }
 
         void AllFilters()
